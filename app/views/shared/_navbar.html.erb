@@ -1,0 +1,47 @@
+<div class="navbar-w">
+  <!-- Logo -->
+  <%= link_to root_path, class: "navbar-logo" do %>
+    <%= image_tag 'logo-blue-no-text.png'%>
+  <% end %>
+
+
+
+  <!-- Right Navigation -->
+  <div class="navbar-right hidden-xs hidden-sm">
+    <a href="about" class="navbar-item navbar-link">Histoire</a>
+    <div class="dropdown">
+      <a href="" class="navbar-item navbar-link" data-toggle="dropdown">Location</a>
+      <ul class="dropdown-menu dropdown-menu-right navbar-dropdown-menu">
+        <li><a href="#">Petite maison bleue</a></li>
+        <li><a href="#">Grande maison pour 6</a></li>
+      </ul>
+    </div>
+    
+    <div class="dropdown">
+      <a href="" class="navbar-item navbar-link" data-toggle="dropdown">Stages et Ateliers</a>
+      <ul class="dropdown-menu dropdown-menu-right navbar-dropdown-menu">
+        <li><a href="#">Nos ateliers</a></li>
+        <li><a href="#">Stages en résidence</a></li>
+        <li><a href="#">Programme 2017</a></li>
+        <li><a href="#">Cherchez un lieu ?</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-dropdown-menu">
+        <li><a href="#">Histoire</a></li>
+        <li><a href="#">Location</a></li>
+        <li><a href="#">Stages et Ateliers</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
