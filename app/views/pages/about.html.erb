@@ -2,70 +2,97 @@
 <div class="page">
   <div class="sidebar hidden-xs">
   	<div class="side-links">
-  		<a class="tab active" data-target="#maisons">
-  			<h3>Les petites maisons</h3>
-      </a>
-      <a class="tab" data-target="#ile">
-        <h3>Belle-ile-en-mer</h3>
-      </a>
-      <a class="tab" data-target="#equipe">
-        <h3>Equipe</h3>
-      </a>
-      <a class="tab" data-target="#contacts">
-        <h3>Contacts</h3>
-      </a>
+  		<span><a class="tab active nav-link" data-target="#maisons">Notre philosophie</a></span>
+      <span><a class="tab nav-link" data-target="#ile">Belle-ile-en-mer</a></span>
+      <span><a class="tab nav-link" data-target="#equipe">Amis et partenaires</a></span>
+      <span><a class="tab nav-link" data-target="#contacts">Contacts</a></span>
   	</div>
   </div>
 
 
 
-
   <!-- LINKS CONTENT -->
   <div class="content-form">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-11 col-xs-offset-1 col-sm-9 col-lg-7">
-          <div class="tab-content" id="maisons">
-            <h4>« Une parenthèse hors du temps, un lieu pour se ressourcer sur tous les plans »</h4>
-            <div class="image-container">
-              <%= image_tag "photo-maison-drone.png", class: "padded" %>
+
+  <!-- First Tab -->
+    <div class="tab-content" id="maisons">
+      <h4 class="satisfy">... Une parenthèse hors du temps, un lieu pour se ressourcer sur tous les plans</h4>
+      <div class="image-container">
+        <%= image_tag "maison-bleue.jpg", class: "padded" %>
+      </div>
+      <h3 class="customized">Histoire de trois maisons</h3>
+      <p class="test">Ici insérer un texte décrivant comment cet endroit est né pour rajouter une touche personnelle</p>
+      <h3 class="customized">Notre philosophie</h3>
+      <p></p>
+      <ul class="unstyled">
+        <li>Faire une pause dans votre vie trépidante ;</li>
+        <li>Faire le plein de l’énergie ambiante : forte et illimitée! ;
+        <li>Redécouvrir la Vie : la vôtre, celle de la nature préservée ;</li>
+        <li>Remettre vos compteurs à zero et repartir du bon pied et dans la bonne direction (voir notre calendrier de stages et ateliers) ;</li>
+        <li>Revenir vers « Vous » ;</li>
+        <li>Vous ressourcer sur tous les plans : corps, âme et esprit (voir notre page <a href="#">« Partenaires et Amis »</a>) ;</li>
+        <li>Pour la découverte de cette île, si bien nommée !</li>
+      </ul>
+    </div>
+
+
+    <!-- Second Tab -->
+    <div class="tab-content hidden" id="ile">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panoramic-image">
+              <%= image_tag 'ile-panaromique.jpg' %>
             </div>
-            <h3>Histoire de trois maisons</h3>
-            <p>Ici insérer un texte décrivant comment cet endroit est né pour rajouter une touche personnelle</p>
-            <h3>Notre philosophie</h3>
-            <p></p>
-            <ul>
-              <li>
-                Faire une pause dans votre vie trépidante ;
-              </li>
-              <li>
-                Faire le plein de l’énergie ambiante : forte et illimitée! ;
-              <li>
-              Redécouvrir la Vie : la vôtre, celle de la nature préservée ;
-              </li>
-              <li>
-               Remettre vos compteurs à zero et repartir du bon pied et dans la bonne direction (voir notre calendrier de stages et ateliers) ;
-              </li>
-              <li>
-                Revenir vers « Vous » ;
-              </li>
-              <li>
-                Vous ressourcer sur tous les plans : corps, âme et esprit (voir notre page « Partenaires et Amis ») ;
-              </li>
-              <li>
-                Pour la découverte de cette île, si bien nommée ! 
-              </li>
-            </ul>
-          </div>
-          <div class="tab-content hidden" id="ile">
-            <p>Description de Belle-Ile</p>
-          </div>
-          <div class="tab-content hidden" id="contacts">
-            <p>Contact me if you want.</p>
           </div>
         </div>
+      
+        <div class="row">
+          <div class="col-xs-12 col-md-10 col-lg-offset-1">
+            <div class="col-xs-12 col-md-8">
+              <div class="text-container">
+                <h4 class="customized">Decouvrir Belle-Ile</h4>
+                <p>Au sud du Morbihan, à 15 km de Quiberon, Belle-Île-en-Mer est la seconde des grandes îles de la façade atlantique. Du nord au sud, d’est en ouest, ses 85 km2 de superficie font de Belle-Île la plus grande des îles du Ponant, et sans doute la plus étonnante aussi par la variété des décors qu’elle propose. Des dunes de sable fin de la plage de Donnant aux falaises sculptées de la pointe de Taillefer ou des Poulains, Belle-Île offre un spectacle remarquable, immortalisé par de nombreux artistes, peintres ou poètes</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+              <div class="media-container hidden-xs">
+                <%= image_tag "belle-ile-map.png" %> 
+              </div>
+            </div>            
+
+            <div class="col-xs-12 col-md-4">
+              <div class="media-container hidden-xs no-padding">
+                <%= image_tag "seagull.png" %>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-8">
+              <div class="text-container">
+                <h4 class="customized">Comme son nom l'indique</h4>
+                <p>C'est un lieu mythique. Belle-Île qui porte si bien son nom, doit son élogieuse réputation à son environnement exceptionnel. Paysages éclectiques, falaises déchirées et panoramas grandioses, landes  et dunes préservées, sentiers bucoliques ouverts aux balades romantiques et aux flâneries, Belle-île a une nature généreuse et fascinante. Les bellilois, qui tous, l'aiment passionnément et goûtent à s'y égarer encore, prennent minutieusement soin d'elle. Pour offrir sa splendeur à tous, ils savent en protéger les richesses et en ménager les ressources, et en font, au-delà d'un lieu unique de sérénité et d'inspiration, un authentique territoire du tourisme responsable. </p>
+              </div>
+            </div>
+            
+<!--             <div class="col-xs-12">
+              <div class="media-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/U-ki8thWaIc" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div> -->
+            
+
+          </div>                  
+        </div>
       </div>
+    </div> 
+
+    <!-- Third Tab -->
+    <div class="tab-content hidden" id="contacts">
+      <p>Contact me if any questions.</p>
     </div>
-  </div>
+  </div>      
 </div>
+
+
+
+
 

@@ -25,28 +25,9 @@
 
 /* Basic navbar item */
 .navbar-item {
-  cursor: pointer;
   padding: 0 20px;
-  text-transform: uppercase;
-  font-weight: 300;
-  letter-spacing: 2px;
 }
 
-/* Navbar link */
-.navbar-link {
-  color: $brand-main;
-  font-size: 14px;
-}
-.navbar-link:hover {
-  color: #da552f;
-  text-decoration: none;
-}
-
-.navbar-link:active {
-  color: #da552f;
-  font-weight: 700;
-  text-decoration: none;
-}
 
 
 /* Dropdown menu */
@@ -57,9 +38,10 @@
 }
 .navbar-dropdown-menu li > a {
   transition: color 0.3s ease;
-  font-weight: lighter !important;
+  font-weight: 300;
   color: #999999 !important;
-  font-size: 14px !important;
+  font-size: 12px;
+  letter-spacing: 1px;
   line-height: 22px !important;
   padding: 10px 20px;
   text-transform: uppercase;

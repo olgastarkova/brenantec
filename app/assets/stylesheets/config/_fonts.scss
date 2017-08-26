@@ -1,9 +1,22 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Kaushan+Script|Satisfy");
 
 // Define fonts for body and headers
-$body-font: "Lato", "sans-serif";
-$headers-font: "Lato", "sans-serif";
+$handwriting-font: "Satisfy";
+
+
+
+.test {
+	font-weight: 300;
+}
+
+.kaushan {
+	font-family: "Kaushan Script";
+}
+
+
+
+
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

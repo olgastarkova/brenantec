@@ -1,7 +1,63 @@
+body {
+	font-weight: 300;
+}
+
+.caps {
+	text-transform: uppercase;
+}
+
 .unstyled li {
 	list-style: none;
 }
 
-.padded {
+.padded-v {
 	padding: 7px 0px;
 }
+
+.padded-h {
+	padding: 0px 7px;
+}
+
+.no-padding {
+	padding-left: 0px;
+	padding-right: 0px;
+	justify-content: left;
+}
+
+
+
+// Fonts style for navbar and sidebar
+
+.nav-link {
+	color: $brand-blue;
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+
+.nav-link.active {
+	font-weight: 700;
+}
+
+
+span .nav-link {
+	display: block; // each link starts from a new line
+}
+
+
+// Something else
+
+.customized {
+  font-size: 14px;
+  font-weight: 700;
+  color: $brand-honey;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+

@@ -1,25 +1,32 @@
-// This is where you override default Bootstrap variables
-// 1. All Bootstrap variables are here => https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
-// 2. These variables are defined with default value (see https://robots.thoughtbot.com/sass-default)
-// 3. You can override them below!
+// Body
+$font-family-sans-serif:  	"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base: 			17px;
+$text-color: 				#333333;
+$body-bg:                 	white;
 
-// General style
-$font-family-sans-serif:  $body-font;
-$headings-font-family:    $headers-font;
-$body-bg:                 white;
-$font-size-base: 18px;
 
-// Colors
-$gray-base:       $gray;
-$brand-primary:   $blue;
-$brand-success:   $green;
-$brand-info:      $yellow;
-$brand-danger:    $red;
-$brand-warning:   $orange;
+// Headings
+$headings-font-family:    	"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-h1:				72px;
+$headings-font-weight:		700;
+
+
+// Links
+$link-color: 				$brand-rose;
+$link-hover-color: 			#da552f;
+$link-hover-decoration: 	none;
+
+
+// Messages
+$brand-success:   			$green;
+$brand-info:      			$yellow;
+$brand-danger:    			$red;
+$brand-warning:   			$orange;
+
 
 // Buttons & inputs' radius
-$border-radius-base:  5px;
-$border-radius-large: 5px;
-$border-radius-small: 5px;
+$border-radius-base:  		20px;
+$border-radius-large: 		20px;
+$border-radius-small: 		20px;
 
 // Override other variables below!
