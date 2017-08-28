@@ -6,15 +6,16 @@ $handwriting-font: "Satisfy";
 
 
 
-.test {
-	font-weight: 300;
-}
 
 .kaushan {
 	font-family: "Kaushan Script";
 }
 
-
+.handwritten {
+  font-family: $handwriting-font;
+  color: #DCAE1D;
+  padding-top: 50px;
+}
 
 
 

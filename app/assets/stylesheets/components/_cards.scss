@@ -10,7 +10,7 @@
 		width: auto;
 	}
 }
-	
+
 
 .card {
 	margin: auto;
@@ -41,4 +41,71 @@
 	text-transform: uppercase;
 	color: $brand-honey;
 	margin: 0px;
+}
+
+
+
+// Landmark separators --> TO REFACTOR !!!
+.things-to-see {
+  padding-top: 40px;
+  margin: 50px 10px;
+  border-top: 1px solid $brand-honey;
+  display: inline-block;
+  position: relative;
+}
+
+.things-to-see:before {
+    position: absolute;
+    left: 46.5%; /* center the element */
+    margin-top: -80px; /* shift left by (width+border)/2 */
+    display: block;
+    content: '';
+    width: 80px;
+    height: 80px;
+    background-image: image-url('photo-camera-img.png');
+    background-size: cover;
+}
+
+
+
+.things-to-do {
+  padding-top: 40px;
+  margin: 50px 10px;
+  border-top: 1px solid $brand-honey;
+  display: inline-block;
+  position: relative;
+}
+
+.things-to-do:before {
+    position: absolute;
+    left: 46.5%; /* center the element */
+    margin-top: -80px; /* shift left by (width+border)/2 */
+    display: block;
+    content: '';
+    width: 80px;
+    height: 80px;
+    background-image: image-url('sea-horse-img.png');
+    background-size: cover;
+}
+
+
+
+.things-to-taste {
+  padding-top: 40px;
+  margin: 50px 10px;
+  border-top: 1px solid $brand-honey;
+  display: inline-block;
+  position: relative;
+}
+
+.things-to-taste:before {
+    position: absolute;
+    left: 46.5%; /* center the element */
+    margin-top: -80px; /* shift left by (width+border)/2 */
+    display: block;
+    content: '';
+    width: 80px;
+    height: 80px;
+    background-image: image-url('dish-img.png');
+    background-size: cover;
 }

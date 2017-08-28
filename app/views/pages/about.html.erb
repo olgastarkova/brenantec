@@ -15,25 +15,10 @@
   <div class="content-form">
 
   <!-- First Tab -->
-    <div class="tab-content" id="maisons">
+    <div class="tab-content">
       <h4 class="satisfy">... Une parenthèse hors du temps, un lieu pour se ressourcer sur tous les plans</h4>
-      <div class="image-container">
-        <%= image_tag "maison-bleue.jpg", class: "padded" %>
-      </div>
-      <h3 class="customized">Histoire de trois maisons</h3>
-      <p class="test">Ici insérer un texte décrivant comment cet endroit est né pour rajouter une touche personnelle</p>
-      <h3 class="customized">Notre philosophie</h3>
-      <p></p>
-      <ul class="unstyled">
-        <li>Faire une pause dans votre vie trépidante ;</li>
-        <li>Faire le plein de l’énergie ambiante : forte et illimitée! ;
-        <li>Redécouvrir la Vie : la vôtre, celle de la nature préservée ;</li>
-        <li>Remettre vos compteurs à zero et repartir du bon pied et dans la bonne direction (voir notre calendrier de stages et ateliers) ;</li>
-        <li>Revenir vers « Vous » ;</li>
-        <li>Vous ressourcer sur tous les plans : corps, âme et esprit (voir notre page <a href="#">« Partenaires et Amis »</a>) ;</li>
-        <li>Pour la découverte de cette île, si bien nommée !</li>
-      </ul>
     </div>
+
 
 
     <!-- Second Tab -->
@@ -47,9 +32,6 @@
               <%= image_tag 'ile-panaromique.jpg' %>
             </div>
           </div>
-  
-      
-
           <div class="col-xs-12 col-md-10 col-md-offset-1">
 
             <!-- Description de Belle-Ile -->
@@ -62,7 +44,7 @@
               </div>
               <div class="col-xs-12 col-sm-4">
                 <div class="media-container hidden-xs">
-                  <%= image_tag "belle-ile-map.png" %> 
+                  <%= image_tag "belle-ile-map.png" %>
                 </div>
               </div>
             </div>
@@ -80,104 +62,137 @@
               </div>
             </div>
             <!-- End of Description de Belle-Ile -->
-                 
+
 
 
 
             <!-- Les Incontournables de Belle-Ile -->
             <!-- Things to see -->
+            <h2 class="handwritten">Les Incontournables de Belle-Ile</h2>
             <div class="row">
-              <div class="col-xs-12">
-                <div class="landmark-icon-container">
-                  <%= image_tag "photo-camera.svg" %>
+              <div class="col-xs-12 things-to-see">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "les-aiguilles-de-port-cotton.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Bangor -</p>
+                        <p class="card-text">Les Aiguilles de Port Cotton</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "eglise-notre-dame-locmaria.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Locmaria -</p>
+                        <p class="card-text">Eglise Notre-Dame de l'Assomption</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "sauzon.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Sauzon -</p>
+                        <p class="card-text">Port de Sauzon</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "citadelle-vauban.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Le Palais -</p>
+                        <p class="card-text">Citadelle Vauban</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "musee-sarah-bernhardt.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Sauzon -</p>
+                        <p class="card-text">Fort Sarah Bernhardt</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "la-plage-de-donnant.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Sauzon -</p>
+                        <p class="card-text">La Plage de Donnant</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "goulphar.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Bangor -</p>
+                        <p class="card-text">Phare de Goulphar</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ccol-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "la-pointe-des-poulains-3.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Sauzon -</p>
+                        <p class="card-text">La Pointe des Poulains</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-                  
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card text-center">
-                  <%= image_tag "les-aiguilles-de-port-cotton.jpg", class: "round-image" %>
-                  <div class="card-description">
-                    <p class="card-note">- Bangor -</p>
-                    <p class="card-text">Les Aiguilles de Port Cotton</p> 
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card text-center">
-                  <%= image_tag "eglise-notre-dame-locmaria.jpg", class: "round-image" %>
-                  <div class="card-description">  
-                    <p class="card-note">- Locmaria -</p>                
-                    <p class="card-text">Eglise Notre-Dame de l'Assomption</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card text-center">
-                  <%= image_tag "port-de-sauzon.jpg", class: "round-image" %>
-                  <div class="card-description">  
-                    <p class="card-note">- Sauzon -</p>                
-                    <p class="card-text">Port de Sauzon</p>
-                  </div>
-                </div>
-              </div>
-              <div class="ccol-xs-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card text-center">
-                  <%= image_tag "port-de-sauzon.jpg", class: "round-image" %>
-                  <div class="card-description">  
-                    <p class="card-note">- Le Palais -</p>                
-                    <p class="card-text">Citadelle Vauban</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+
 
 
 
             <!-- Sports to practice -->
             <div class="row">
-              <div class="col-xs-12">
-                <div class="landmark-icon-container">
-                  <%= image_tag "sea-horse-facing-left.svg" %>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="card text-center">
-                  <%= image_tag "les-aiguilles-de-port-cotton.jpg", class: "round-image" %>
-                  <div class="card-description">
-                    <p class="card-note">- Bangor -</p>
-                    <p class="card-text">Paddle</p> 
+              <div class="col-xs-12 things-to-do">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "paddle-2.jpeg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Sauzon -</p>
+                        <p class="card-text">Paddle</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="card text-center">
-                  <%= image_tag "eglise-notre-dame-locmaria.jpg", class: "round-image" %>
-                  <div class="card-description">  
-                    <p class="card-note">- Locmaria -</p>                
-                    <p class="card-text">Body-board</p>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "surf.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Locmaria -</p>
+                        <p class="card-text">Surf & Bodyboard</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="card text-center">
-                  <%= image_tag "port-de-sauzon.jpg", class: "round-image" %>
-                  <div class="card-description">  
-                    <p class="card-note">- Sauzon -</p>                
-                    <p class="card-text">Planche à voile</p>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "golf-3.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Sauzon -</p>
+                        <p class="card-text">Golf</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="card text-center">
-                  <%= image_tag "port-de-sauzon.jpg", class: "round-image" %>
-                  <div class="card-description">  
-                    <p class="card-note">- Le Palais -</p>                
-                    <p class="card-text">Kayak</p>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "planche-à-voile.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Le Palais -</p>
+                        <p class="card-text">Planche à voile</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -185,46 +200,43 @@
 
             <!-- Things to taste -->
             <div class="row">
-              <div class="col-xs-12">
-                <div class="landmark-icon-container">
-                  <%= image_tag "dish.svg" %>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="card text-center">
-                  <%= image_tag "les-aiguilles-de-port-cotton.jpg", class: "round-image" %>
-                  <div class="card-description">
-                    <p class="card-note">- Bangor -</p>
-                    <p class="card-text">Bière de Belle-Ile</p> 
+              <div class="col-xs-12 things-to-taste">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "bieres.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Bangor -</p>
+                        <p class="card-text">Bière de Belle-Ile</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="card text-center">
-                  <%= image_tag "eglise-notre-dame-locmaria.jpg", class: "round-image" %>
-                  <div class="card-description">  
-                    <p class="card-note">- Locmaria -</p>                
-                    <p class="card-text">Fromage de chèvre</p>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "fruits-de-mer.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Locmaria -</p>
+                        <p class="card-text">Fruits de mer</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="card text-center">
-                  <%= image_tag "port-de-sauzon.jpg", class: "round-image" %>
-                  <div class="card-description">  
-                    <p class="card-note">- Sauzon -</p>                
-                    <p class="card-text">Crêpes de Sauzon</p>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "crepes.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Sauzon -</p>
+                        <p class="card-text">Crêpes de Sauzon</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="card text-center">
-                  <%= image_tag "port-de-sauzon.jpg", class: "round-image" %>
-                  <div class="card-description">  
-                    <p class="card-note">- Le Palais -</p>                
-                    <p class="card-text">Cidre breton</p>
+                  <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="card text-center">
+                      <%= image_tag "far-breton.jpg", class: "round-image" %>
+                      <div class="card-description">
+                        <p class="card-note">- Le Palais -</p>
+                        <p class="card-text">Phare breton aux pruneaux</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -234,23 +246,23 @@
           </div>
         </div>
       </div>
-    </div> 
-    
-    
+    </div>
+
+
 
 
     <!-- Third Tab -->
     <div class="tab-content hidden" id="contacts">
       <p>Contact me if any questions.</p>
     </div>
-  </div>      
+  </div>
 </div>
 
 
 
 
 
-<!--  Belle-Ile by Drone video         
+<!--  Belle-Ile by Drone video
 <div class="col-xs-12">
   <div class="media-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/U-ki8thWaIc" frameborder="0" allowfullscreen></iframe>
