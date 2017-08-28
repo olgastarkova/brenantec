@@ -1,0 +1,44 @@
+
+// About Belle-Ile page --> Landmarks style
+
+.landmark-icon-container {
+	display: flex;
+	justify-content: space-around;
+
+	img {
+		height: 40px;
+		width: auto;
+	}
+}
+	
+
+.card {
+	margin: auto;
+	padding: 12px 0px;
+}
+
+.round-image {
+	width: 150px;
+	height: auto;
+	border-radius: 50%;
+}
+
+
+.card-description {
+	width: 150px;
+	margin: auto;
+	padding: 12px 0px;
+}
+
+.card-text {
+	font-size: 15px;
+	margin: 0px;
+}
+
+.card-note {
+	font-size: 10px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: $brand-honey;
+	margin: 0px;
+}

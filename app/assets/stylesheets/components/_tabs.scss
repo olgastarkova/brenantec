@@ -33,19 +33,11 @@
 
 
 
-.subsection {
-	margin-top: 20px;
-	display: flex;
-	align-items: center;
-}
-
-
-
 .media-container {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	padding: 30px 30px;
+	padding: 20px 20px;
 
 	img {
 		max-width: 100%;
@@ -53,6 +45,10 @@
 	}
 }
 
+
+.landmarks-section {
+	width: 100%;
+}
 
 
 
