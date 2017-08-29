@@ -5,5 +5,11 @@ class PagesController < ApplicationController
 
   def about
   end
-  
+
+  def accommodation
+  end
+
+  def blue
+  end
+
 end

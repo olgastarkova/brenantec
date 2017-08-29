@@ -120,10 +120,59 @@ p.small-note {
   color: $brand-honey;
 }
 
+.letter-spaced {
+  letter-spacing: 2px;
+}
+
 
 
 // Icons
 
 span.contact {
   margin-left: 15px;
+}
+
+
+
+// Test
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.photo-background {
+  background-image: url('maison-bleue-2.png');
+  background-size: cover;
+  height: 70%;
+  background-position: center;
+  position: relative;
+
+  span {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    color: white;
+    font-size: 30px;
+  }
+}
+
+.features-wrapper {
+  height: 230px;
+  background-color: $brand-honey;
+  color: white;
+}
+
+.features-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-holder {
+  width: 120px;
+  i {
+    font-size: 36px;
+    margin-bottom: 5px;
+  }
 }
