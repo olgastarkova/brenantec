@@ -2,13 +2,14 @@ body {
 	font-weight: 300;
 }
 
-.caps {
-	text-transform: uppercase;
-}
-
 .unstyled li {
 	list-style: none;
 }
+
+
+
+
+// Spacing
 
 .padded-v {
 	padding: 7px 0px;
@@ -18,11 +19,31 @@ body {
 	padding: 0px 7px;
 }
 
+.left-padded {
+  padding-left: 30px;
+}
+
 .no-padding {
 	padding-left: 0px;
 	padding-right: 0px;
 	justify-content: left;
 }
+
+
+.top-margin {
+  margin-top: 50px;
+}
+
+.bottom-margin {
+  margin-bottom: 50px;
+}
+
+.no-top-margin {
+  margin-top: 0px;
+}
+
+
+
 
 
 
@@ -49,7 +70,17 @@ span .nav-link {
 }
 
 
-// Something else
+
+
+
+
+
+// Text styles
+
+.caps {
+  text-transform: uppercase;
+}
+
 
 .customized {
   font-size: 14px;
@@ -62,3 +93,37 @@ span .nav-link {
 }
 
 
+.small-note {
+  font-size: 16px;
+}
+
+
+p.small-note {
+  margin-bottom: 6px;
+}
+
+.numbers {
+  font-size: 14px
+}
+
+.fine-print {
+  font-size: 12px;
+}
+
+
+.handwritten {
+  font-family: $handwriting-font;
+  letter-spacing: 1px;
+}
+
+.honey {
+  color: $brand-honey;
+}
+
+
+
+// Icons
+
+span.contact {
+  margin-left: 15px;
+}
