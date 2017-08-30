@@ -94,7 +94,7 @@ span .nav-link {
 
 
 .small-note {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 
@@ -124,6 +124,9 @@ p.small-note {
   letter-spacing: 2px;
 }
 
+h5 {
+  margin-top: 30px;  
+}
 
 
 // Icons
@@ -169,6 +172,12 @@ span.contact {
   justify-content: space-between;
 }
 
+.features-container-mini {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .icon-holder {
   width: 120px;
   i {
@@ -176,3 +185,16 @@ span.contact {
     margin-bottom: 5px;
   }
 }
+
+.icon-holder-mini {
+  width: 90px;
+  i {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+}
+
