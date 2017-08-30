@@ -64,9 +64,8 @@
       </div>
     </div>
   </div>
-
 </div>
-
+<!-- End of wrapper -->
 
 <div class="container">
   <div class="row">
@@ -108,32 +107,69 @@
           <h4 class="customized">Equipement</h4>
         </div>
       </div>
-      <div class="row">
+      <div class="row inline-icons">
         <div class="col-xs-12 col-md-6">
           <p class="honey">Individuel:</p>
           <div class="col-xs-6 small-note">
-            <p>Internet</p>
-            <p>Terrasse</p>
-            <p>Cuisine</p>
+            <p><%=image_tag "wifi.svg", class: "space-right" %>Internet</p>
+            <p><%=image_tag "patio.svg", class: "space-right" %>Terrasse</p>
+            <p><%=image_tag "kitchen-furniture.svg", class: "space-right" %>Cuisine</p>
           </div>
           <div class="col-xs-6 small-note">
-            <p>Cheminée</p>
-            <p>TV</p>
-            <p>Aspirateur</p>
+            <p><%=image_tag "fireplace.svg", class: "space-right" %>Cheminée</p>
+            <p><%=image_tag "television.svg", class: "space-right" %>TV</p>
+            <p><%=image_tag "vacuum-cleaner.svg", class: "space-right" %>Aspirateur</p>
           </div>
         </div>
         <div class="col-xs-12 col-md-6">
-          <p class="honey">Commun:</p>
+          <p class="honey mobile-padding">Commun:</p>
           <div class="col-xs-12 small-note">
-            <p>BBQ</p>
-            <p>Lave-linge / Sèche-linge</p>
-            <p>Parking privatif</p>
+            <p><%=image_tag "grill.svg", class: "space-right" %>BBQ</p>
+            <p><%=image_tag "washing-machine.svg", class: "space-right" %>Lave-linge / Sèche-linge</p>
+            <p><%=image_tag "parking.svg", class: "space-right" %>Parking privatif</p>
           </div>
         </div>
-      </div>   
+      </div>
+
+      <!-- Location section -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h4 class="customized">Localisation</h4>
+          <p>Située au nord ouest de l’Ile, à l’entrée du village très calme de Brénantec en Sauzon, au milieu de la campagne, à 1,2 km du port de Sauzon, - charmant petit port de pêche et de plaisance – et à 1,5 km de la plage.</p>
+        </div>
+      </div>
     </div>
   </div>
-  
-
-
 </div>
+
+
+<!-- Map -->
+<div class="map-container">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43242.48225338888!2d-3.2495571864788046!3d47.36013047906683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x481a83218914a0fd%3A0x42182927cb7cb7cf!2sBrenantec%2C+56360+Sauzon!5e0!3m2!1sen!2sfr!4v1504103764682" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<!-- End of Map -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-1">
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="space-before">Exposée Ouest/ Est, elle bénéficie d’un jardin avec une terrasse privatif abrité à l’ouest – très vite baigné de soleil dans la journée.</p>
+          <%= link_to do %>
+            <i class="fa fa-map-o small-note padded-h" aria-hidden="true"></i>
+            <span class="small-note">Voir le plan du terrain</span>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <h4 class="customized">Disponibilités</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

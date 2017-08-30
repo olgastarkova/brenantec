@@ -19,6 +19,14 @@ body {
 	padding: 0px 7px;
 }
 
+.space-right {
+  padding-right: 7px;
+}
+
+.space-before {
+  padding-top: 15px;
+}
+
 .left-padded {
   padding-left: 30px;
 }
@@ -27,6 +35,10 @@ body {
 	padding-left: 0px;
 	padding-right: 0px;
 	justify-content: left;
+}
+
+.no-bottom-padding {
+  padding-bottom: 0px;
 }
 
 
@@ -43,6 +55,11 @@ body {
 }
 
 
+@media (max-width: 479px) {
+    .mobile-padding {
+        padding-top: 15px;
+    }
+}
 
 
 
@@ -88,8 +105,8 @@ span .nav-link {
   color: $brand-honey;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-top: 25px;
-  padding-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 15px;
 }
 
 
@@ -197,4 +214,11 @@ span.contact {
     font-size: 10px;
   }
 }
+
+
+
+.map-container {
+  width: 100%;
+}
+
 
