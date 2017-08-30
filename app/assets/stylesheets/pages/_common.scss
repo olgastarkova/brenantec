@@ -222,3 +222,26 @@ span.contact {
 }
 
 
+
+
+// Booking request form
+
+.bkg-request {
+  height: 500px;
+  width: 250px;
+  background-color: white;
+  border: 1px solid #333333;
+  position: fixed;
+}
+
+
+.bkg-header {
+  width: 100%;
+  background-color: #333333;
+  
+  h5{
+    font-weight: 300;
+    margin: 0px;
+    padding: 12px 7px;
+  }
+}
