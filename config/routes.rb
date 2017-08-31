@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   get 'accommodation', to: 'pages#accommodation', as: :accommodation
   get 'blue', to: 'pages#blue', as: :blue
 
+  resources :workshops, only: [ :index, :show ] do
+  	resources :sessions, only: [ :index, :show ]
+  end
 
 end
