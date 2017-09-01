@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-md-10 col-md-offset-1">
+			<h3>Notre équipe</h3>
+			<div class="team">
+				<% if @coaches %>
+					<% @coaches.each do |coach| %>
+						<h3><%= coach.name %></h3>
+						<p class="fine-print"><%= coach.role %></p>
+						<p><%= coach.intro %></p>
+					<% end %>
+				<% else %>
+					<p>Le contenu arrive bientôt :)</p>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+
