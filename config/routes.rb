@@ -17,5 +17,7 @@ Rails.application.routes.draw do
   resources :sessions
   resources :coaches
 
+  mount Attachinary::Engine => "/attachinary"
+
 
 end

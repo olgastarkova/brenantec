@@ -43,5 +43,5 @@ end
 	end
 
 	def workshop_params
-		params.require(:workshop).permit(:title, :description, :capacity, :price, :format, :coach_id)
+		params.require(:workshop).permit(:title, :description, :capacity, :price, :format, :coach_id, photos: [])
 	end
