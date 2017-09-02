@@ -13,14 +13,14 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-4">
-						<%= @workshops.each do |workshop| %>
+						<% @workshops.each do |workshop| %>
 							<div class="card">
 								<p><%= workshop.format %></p>
 								<p><%= workshop.title %></p>
-								<%= workshop.photos.each do |photo| %>
+								<% workshop.photos.each do |photo|  %>
 									<%= cl_image_tag photo.path, width: 300, height: 300, crop: :fill %>
 								<% end %>
-								<p><%= workshop.description %>
+								<p><%= workshop.description %></p>
 							</div>
 						<% end %>
 					</div>
@@ -28,4 +28,4 @@
 			</div>
 		</div>
 	</div>
-<div>
+</div>
