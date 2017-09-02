@@ -20,6 +20,7 @@
 								<%= workshop.photos.each do |photo| %>
 									<%= cl_image_tag photo.path, width: 300, height: 300, crop: :fill %>
 								<% end %>
+								<p><%= workshop.description %>
 							</div>
 						<% end %>
 					</div>
