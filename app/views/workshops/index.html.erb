@@ -1,5 +1,5 @@
 <div class="page">
-	<div class="sidebar hidden-xs hidden-sm">
+	<div class="sidebar hidden-xs hidden-sm hidden-md">
 	<!-- add filters here-->
 	</div>
 	<div class="content-form">
@@ -13,8 +13,8 @@
 				</div>
 				<div class="row">
 					<% @workshops.each do |workshop| %>
-						<div class="col-xs-12 col-sm-6 col-md-3">
-							<div class="card bordered text-center zero-padding">
+						<div class="col-xs-12 col-sm-4">
+							<div class="card-w bordered text-center zero-padding">
 								<% workshop.photos.each do |photo|  %>
 									<%= cl_image_tag photo.path, width: 200, height: 200, crop: :fill, class: "card-image-w" %>
 								<% end %>									

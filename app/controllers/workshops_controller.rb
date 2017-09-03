@@ -1,5 +1,5 @@
 class WorkshopsController < ApplicationController
- before_action :set_workshop, only: [:show, :update, :destroy]
+	before_action :set_workshop, only: [:show, :edit, :update, :destroy]
 
 	def index
 		@workshops = Workshop.all
@@ -13,6 +13,7 @@ class WorkshopsController < ApplicationController
 		@coaches = Coach.all
 	end;
 
+
 	def create
 		@workshop = Workshop.new(workshop_params)
 		if @workshop.save
@@ -25,9 +26,17 @@ class WorkshopsController < ApplicationController
 	def edit
 	end
 
+
+
 	def update
-		@workshop.update(workshop_params)
+		if @workshop.update(workshop_params)
+			redirect_to workshop_path(@workshop)
+		else
+			render :edit
+		end
 	end
+
+
 
 	def destroy
 		@workshop.destroy
@@ -36,7 +45,7 @@ end
 
 
 
-	private
+private
 
 	def set_workshop
 		@workshop = Workshop.find(params[:id])
