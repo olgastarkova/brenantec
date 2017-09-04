@@ -4,6 +4,9 @@
 }
 
 
+
+// Sidebar
+
 .sidebar {
 	height: 2700px;
 	width: 300px;
@@ -19,8 +22,17 @@
 	a {
 		margin-top: 15px;
 	}
+
+	.nav-link {
+		font-size: 14px;
+	}
+
+
 }
 
+
+
+// Page right to the sidebar
 
 .content-form {
 	flex-grow: 1;
@@ -33,25 +45,7 @@
 
 
 
-.media-container {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	padding: 20px 20px;
 
-	img {
-		max-width: 100%;
-		height: auto;
-	}
-}
-
-
-
-@media (min-width: 992px) {
-    .content-container {
-        padding-top: 60px;
-    }
-}
 
 
 

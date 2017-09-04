@@ -1,32 +1,35 @@
 <div class="page">
 	<div class="sidebar hidden-xs hidden-sm hidden-md">
-	<!-- add filters here-->
+		<!-- add filters here-->
 	</div>
+
 	<div class="content-form">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-10 col-md-offset-1">
-				<div class="row">
-					<div class="col-xs-12">
-						<h3 class="handwritten top-margin">Nos stages et ateliers</h3>
-					</div>
-				</div>
-				<div class="row">
-					<% @workshops.each do |workshop| %>
-						<div class="col-xs-12 col-sm-4">
-							<div class="card-w bordered text-center zero-padding">
-								<% workshop.photos.each do |photo|  %>
-									<%= cl_image_tag photo.path, width: 200, height: 200, crop: :fill, class: "card-image-w" %>
-								<% end %>									
-								
-								<div class="card-description-w">
-									<p class="card-text fine-print caps"><%= workshop.format %></p>
-									<p class="card-text bigger bold">"<%= workshop.title %>"</p>
-								</div>
-							</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<h3 class="handwritten top-margin">Nos stages et ateliers</h3>
 						</div>
-					<% end %>
-						
+					</div>
+					<div class="row">
+						<% @workshops.each do |workshop| %>
+							<div class="col-xs-12 col-sm-4">
+								<%= link_to workshop_path(workshop) do %>
+									<div class="card-w bordered text-center no-padding">
+										<% workshop.photos.each do |photo|  %>
+											<%= cl_image_tag photo.path, width: 200, height: 200, crop: :fill, class: "card-image-w" %>
+										<% end %>									
+										
+										<div class="card-description-w">
+											<p class="card-text fine-print caps"><%= workshop.format %></p>
+											<p class="card-text bigger bold">"<%= workshop.title %>"</p>
+										</div>
+									</div>
+								<% end %>
+							</div>
+						<% end %>	
+					</div>
 				</div>
 			</div>
 		</div>

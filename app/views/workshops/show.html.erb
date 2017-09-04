@@ -1,23 +1,33 @@
 <div class="top-margin">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 inline-icons">
-				<%= link_to workshops_path do %>
-					<p><i class="fa fa-chevron-circle-left space-right" aria-hidden="true"></i>Revenir à la liste</p>
-				<% end %>
+			<div class="col-xs-12 col-md-10 col-md-offset-1">
+				<div class="row">
+					<div class="col-xs-12 inline-icons">
+						<%= link_to workshops_path do %>
+							<p class="small-note"><i class="fa fa-chevron-circle-left space-right" aria-hidden="true"></i>Revenir à la liste des cours et ateliers</p>
+						<% end %>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<% @workshop.photos.each do |photo|  %>
+							<%= cl_image_tag photo.path, width: 400, height: 400, crop: :fill, class: "card-image-w panoramic-image" %>
+						<% end %>					
+					</div>
+					<div class="col-xs-12 col-md-6">
+<!-- 						<p class="fine-print caps"><%= @workshop.format %></p> -->
+						<h6 class="customized"><%= @workshop.format %></p>
+						<h2 class="handwritten">"<%= @workshop.title %>"	</h2>
+						<h4 class="customized">Description</h4>
+						<p><%= simple_format(@workshop.description) %></p>
+						<p>Nombre de participants: 	<%= @workshop.capacity %> personnes</p>
+						<h4 class="customized">Tarifs</h4>
+						<p><%= @workshop.price %> EUR</p>
+					</div>
+				</div>
 			</div>
-		<div class="row">
-			<div class="col-xs-12 col-sm-6">
-				<% @workshop.photos.each do |photo|  %>
-					<%= cl_image_tag photo.path, width: 400, height: 400, crop: :fill, class: "card-image-w" %>
-				<% end %>					
-			</div>
-			<div class="col-xs-12 col-sm-6">
-				<p><%= @workshop.format %></p>
-				<p>"<%= @workshop.title %>"	</p>
-				<p><%= @workshop.description %></p>
-				<p>Nombre de participants: 	<%= @workshop.capacity %> personnes</p>
-				<p>Prix: <%= @workshop.price %> EUR</p>
 		</div>
 	</div>
 </div>
