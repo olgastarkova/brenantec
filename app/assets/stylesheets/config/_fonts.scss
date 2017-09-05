@@ -12,6 +12,9 @@ body {
 	font-weight: 300;
 }
 
+.medium {
+	font-weight: 400;
+}
 
 .bold {
   font-weight: 700;
@@ -44,6 +47,16 @@ body {
 
 
 // Customized headings
+
+h2.custom {
+	font-size: 32px;
+	letter-spacing: 1px;
+	font-weight: 300;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+
 .customized {
   text-transform: uppercase;
   letter-spacing: 1px;

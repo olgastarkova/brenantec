@@ -114,31 +114,47 @@
 // Workshops page
 
 .card-w {
-  width: 220px;
-  margin: auto;
-  padding: 12px 0px;
-  margin-bottom: 20px;
+  width: 230px;
+  height: 335px;
+  margin: 20px auto;
+  border: 1px solid #979797;
+
+  .class-image-holder {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .card-image-w {
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 1px 1px 4px #E6E6E6;
+  }
+
 }
 
-.bordered {
-  border: 1px solid #979797;
-}
 
 .card-description-w {
   width: 190px;
   margin: auto;
-  padding-bottom: 12px;
   text-align: left;
   color: #333333;
 
-  .bigger {
-    font-size: 16px;
+  .card-note {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: 400;
   }
 }
 
-.card-image-w {
-  padding: 10px 5px;
-  margin: 0;
-  max-width: 100%;
-  height: auto;
-}
+
