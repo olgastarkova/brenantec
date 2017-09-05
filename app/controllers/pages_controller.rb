@@ -12,6 +12,9 @@ class PagesController < ApplicationController
   def blue
   end
 
+  def stylesheet
+  end
+
   def dashboard
     @coaches = Coach.all
     @workshops = Workshop.all

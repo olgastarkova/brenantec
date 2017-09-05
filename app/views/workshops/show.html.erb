@@ -21,7 +21,6 @@
 						<% end %>
 						<h4 class="customized">Description</h4>
 						<p><%= simple_format(@workshop.description) %></p>
-						<p>Nombre de participants: 	<%= @workshop.capacity %> personnes</p>
 					</div>
 					<div class="col-xs-12 col-md-5">
 						<div class="session-list">
@@ -60,10 +59,14 @@
 							<p class="aligned">Partage autour d’un dîner végétarien</p>
 							<p class="fine-print">(*) Etapes optionnelles pour ceux qui le souhaitent</p>
 						</div>
+
+						<h4 class="customized">Taille de groupes</h4>
+						<p>Jusqu'à <%= @workshop.capacity %> personnes maximum</p>
 						
 						<h4 class="customized">Tarifs</h4>
-						<p><%= @workshop.price %> EUR *</p>
+						<p class="no-bottom-margin"><%= @workshop.price %> EUR *</p>
 						<p class="fine-print">*Prix varie de 9 à 29 € selon les options choisies.</p>
+
 						<h4 class="customized">Autres informations</h4>
 						<p class="inline-icons"><%=image_tag "baby.svg", class: "space-right" %>Possibilité de babysitting sur place pendant les séances.</p>		
 					</div>

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'accommodation', to: 'pages#accommodation', as: :accommodation
   get 'blue', to: 'pages#blue', as: :blue
   get "dashboard", to: "pages#dashboard"
+  get "stylesheet", to: "pages#stylesheet"
 
   resources :workshops
   resources :sessions
