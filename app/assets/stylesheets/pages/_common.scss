@@ -6,6 +6,7 @@
   color: $brand-honey;
 }
 
+
 .bordered {
   border: 1px dotted grey;
 }
@@ -30,6 +31,9 @@
   padding-top: 15px;
 }
 
+.space-after {
+  padding-bottom: 15px;
+}
 
 .padded-v {
   padding: 7px 0px; // REVIEW
@@ -75,6 +79,15 @@
 
 
 
+// TEST
+.testred {
+  background-color: red;
+}
+
+
+.testblue {
+  background-color: blue; 
+}
 
 
 

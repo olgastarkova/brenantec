@@ -14,3 +14,24 @@
 	background: white;
 	color: $sea;
 }
+
+
+
+.btn-primary-rose {
+	background-color: $brand-light-rose;
+	border-radius: 15px;
+	color: white;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 400;
+	padding: 12px 12px;
+	letter-spacing: 2px;
+}
+
+.btn-primary-rose:hover {
+	background-color: $brand-rose;
+	color: white;
+}
+
+
+
