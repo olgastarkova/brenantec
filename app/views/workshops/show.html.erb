@@ -23,24 +23,26 @@
 						<p><%= simple_format(@workshop.description) %></p>
 					</div>
 					<div class="col-xs-12 col-md-5">
-						<div class="session-list">
-							<h4 class="customized">Prochaines sessions</h4>
-							<div class="session">
-								<div class="session-info">
-									<p><i class="fa fa-calendar space-right" aria-hidden="true"></i> Mercredi, 25 Septembre 2017</p>
-									<p class="fine-print">5 places disponibles</p>
+						<div id="one">
+							<div class="session-list">
+								<h4 class="customized">Prochaines sessions</h4>
+								<div class="session">
+									<div class="session-info">
+										<p><i class="fa fa-calendar space-right" aria-hidden="true"></i> Mercredi, 25 Septembre 2017</p>
+										<p class="fine-print">5 places disponibles</p>
+									</div>
+									<div class="session-control">
+										<a class="btn btn-primary-rose btn-sm">Réserver</a>
+									</div>
 								</div>
-								<div class="session-control">
-									<a class="btn btn-primary-rose btn-sm">Réserver</a>
-								</div>
-							</div>
-							<div class="session">
-								<div class="session-info">
-									<p><i class="fa fa-calendar space-right" aria-hidden="true"></i> Samedi, 28 Septembre 2017</p>
-									<p class="fine-print">3 places disponibles</p>
-								</div>
-								<div class="session-control">
-									<a class="btn btn-primary-rose btn-sm">Réserver</a>
+								<div class="session">
+									<div class="session-info">
+										<p><i class="fa fa-calendar space-right" aria-hidden="true"></i> Samedi, 28 Septembre 2017</p>
+										<p class="fine-print">3 places disponibles</p>
+									</div>
+									<div class="session-control">
+										<a class="btn btn-primary-rose btn-sm">Réserver</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -76,3 +78,19 @@
 		</div>
 	</div>
 </div>
+
+
+<% content_for(:after_js) do %>
+  <script type="text/javascript">
+    var footer = document.getElementById("two").offsetHeight;
+    function sticky() {
+      if (window.innerWidth < 900) {
+        $("#one").unstick();
+      } else {
+        $("#one").sticky({bottomSpacing: 130 + footer});
+      }
+    };
+    window.addEventListener('load', sticky);
+    window.addEventListener('resize', sticky);
+  </script>
+<% end %>
