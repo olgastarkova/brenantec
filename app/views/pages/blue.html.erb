@@ -140,8 +140,19 @@
         <div class="bkg-header text-center">
           <h5>A partir de <strong>70 eur</strong> / nuit</h5>
         </div>
+        <div class="bkg-details">
+          <%= simple_form_for [@brequest] do |f| %>
+           <%= f.error_notification %>
+           <%= f.input :checkin, as: :string, input_html: { class: "datepicker test-icon", id: "start" }, label: "Arrivée", placeholder: ''  %>
+           <%= f.input :checkout, as: :string, input_html: { class: "datepicker test-icon", id: "end" }, label: "Départ", placeholder: '' %>
+           <p><strong>Prix par nuit:</strong> 70 EUR </p>
+           <p><strong>Nombre de jours:</strong>  <span id = "nb_days"> jours </span></p>
+           <p><strong>Prix final:</strong>  <span id = "final_price"> EUR </span></p>
+           <%= f.submit "Envoyer la demande", class: 'btn btn-primary-rose fixed-size'%>
+          <% end %>
+        </div>
+        
         <div class="bkg-control text-center">
-          <a class="btn btn-primary-rose fixed-size">Envoyer la demande</a>
           <a href="https://www.abritel.fr/location-vacances/p6081247a" target="blank" class="btn btn-abritel fixed-size"><%=image_tag "abritel-logo.svg", class: "space-right" %>Réserver sur Abritel</a>
         </div>
         <div class="direct-contact">
@@ -175,5 +186,22 @@
     window.addEventListener('resize', sticky);
   </script>
 <% end %>
+
+
+<!-- calculates booking price dynamically -->
+<script type="text/javascript" >
+  window.onload = function() {
+    $(document).ready(function() {
+      $("#end").on("dp.hide", function(e) {
+        var start = Date.parse($("#start").val());
+        var end = Date.parse($("#end").val());
+        var nb_days = (end - start)/(24 * 60 * 60 * 1000);
+        var total_price = nb_days * 70;
+        $("#nb_days").html(nb_days);
+        $("#final_price").html(total_price);
+      });
+    });
+  }
+</script>
 
 

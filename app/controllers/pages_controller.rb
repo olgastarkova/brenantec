@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   end
 
   def blue
+    @brequest = Brequest.new
   end
 
   def stylesheet

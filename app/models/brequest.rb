@@ -1,0 +1,2 @@
+class Brequest < ApplicationRecord
+end

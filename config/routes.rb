@@ -1,12 +1,4 @@
 Rails.application.routes.draw do
-  get 'sessions/index'
-
-  get 'sessions/show'
-
-  get 'workshops/index'
-
-  get 'workshops/show'
-
   root to: 'pages#home'
   get 'about', to: 'pages#about', as: :about
   get 'accommodation', to: 'pages#accommodation', as: :accommodation
@@ -17,6 +9,7 @@ Rails.application.routes.draw do
   resources :workshops
   resources :sessions
   resources :coaches
+  resources :brequests, only: [:new, :create, :index]
 
   mount Attachinary::Engine => "/attachinary"
 
