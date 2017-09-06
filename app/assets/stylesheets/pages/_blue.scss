@@ -150,6 +150,11 @@ p.small-note {
   font-weight: 300;
   margin: auto;
 
+  p {
+    line-height: 0.9;
+    font-size: 16px;
+  }
+
   label {
     text-transform: uppercase;
     letter-spacing: 1px;
