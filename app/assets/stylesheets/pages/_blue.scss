@@ -123,7 +123,7 @@ p.small-note {
 .bkg-request {
   height: 400px;
   background-color: white;
-  border: 1px solid #333333;
+  border: 1px solid #dce0e0;
   margin-top: 35px;
 }
 
@@ -136,6 +136,29 @@ p.small-note {
     font-weight: 300;
     margin: 0px;
     padding: 12px 7px;
+    color: white;
   }
 }
 
+
+.bkg-control {
+  margin: auto;
+}
+
+.direct-contact {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+
+  p {
+    font-size: 14px;
+  }
+
+  .small-note {
+    letter-spacing: 1px;
+  }
+
+  img {
+    width: 25px;
+  }
+}
