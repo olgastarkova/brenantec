@@ -1,6 +1,5 @@
-// Cover photo
 .wrapper {
-  height: 65vh;
+  height: 100vh;
   width: 100%;
   position: relative;
 }
@@ -8,11 +7,11 @@
 .photo-background {
   background-image: url('maison-bleue-2.png');
   background-size: cover;
-  height: 100%;
+  height: 70%;
   background-position: center;
   position: relative;
 
-  span { // Icon to go back to the list of homes
+  span {
     position: absolute;
     top: 30px;
     left: 40px;
@@ -21,45 +20,13 @@
   }
 }
 
-
-// Page layout
-
-.main {
-  display: flex;
-  justify-content: space-between;
+.features-wrapper {
+  height: 230px;
+  background-color: $brand-honey;
+  color: white;
 }
-
-
-.home-section {
-  width: 65%;
-
-  .title {
-    h2 {
-     color: $brand-honey;
-     margin-bottom: 5px;
-    }
-    
-
-    p {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
-    }
-  }
-}
-
-
-.form-section {
-  width: 25%;
-}
-
-
-
-// Home-section elements
-
 
 .features-container {
-  padding: 0 20px;
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
@@ -73,14 +40,9 @@
 
 .icon-holder {
   width: 120px;
-
   i {
-    font-size: 30px;
+    font-size: 36px;
     margin-bottom: 5px;
-  }
-
-  p {
-    font-size: 10px;
   }
 }
 
@@ -92,19 +54,10 @@
     font-size: 30px;
     margin-bottom: 5px;
   }
-}
 
-
-
-.description {
-  h5 {
-    margin-top: 30px; 
+  p {
+    font-size: 10px;
   }
-}
-
-
-p.small-note {
-  margin-bottom: 6px; // also used in workshops-show and about (landmarks)
 }
 
 
@@ -116,15 +69,15 @@ p.small-note {
 
 
 
-
-
 // Booking request form
 
 .bkg-request {
   height: 400px;
+  width: 250px;
   background-color: white;
   border: 1px solid #333333;
   margin-top: 35px;
+  // position: fixed;
 }
 
 
@@ -139,3 +92,16 @@ p.small-note {
   }
 }
 
+
+
+// Copy
+.home-description {
+  h5 {
+    margin-top: 30px; 
+  }
+}
+
+
+p.small-note {
+  margin-bottom: 6px; // also used in workshops-show and about (landmarks)
+}
