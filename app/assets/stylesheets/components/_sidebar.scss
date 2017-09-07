@@ -1,0 +1,55 @@
+.page {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+// Sidebar
+
+.sidebar {
+	height: 2700px;
+	width: 300px;
+	background-color: rgba(216,216,216,0.06);
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+ 
+
+.side-links {
+	padding-top: 100px;
+	padding-left: 60px;
+
+	a {
+		margin-top: 15px;
+	}
+
+	.nav-link {
+		font-size: 14px;
+	}
+
+
+}
+
+
+
+// Page right to the sidebar
+
+.content-form {
+	flex-grow: 1;
+	overflow-y: scroll;
+}
+
+.tab-content {
+	margin: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+

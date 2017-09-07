@@ -1,0 +1,201 @@
+// Cover photo
+.wrapper {
+  height: 65vh;
+  width: 100%;
+  position: relative;
+}
+
+.photo-background {
+  background-image: url('maison-bleue-2.png');
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+  position: relative;
+
+  span { // Icon to go back to the list of homes
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    color: white;
+    font-size: 30px;
+  }
+}
+
+
+// Page layout
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.home-section {
+  width: 65%;
+
+  .title {
+    h2 {
+     color: $brand-honey;
+     margin-bottom: 5px;
+    }
+    
+
+    p {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+  }
+}
+
+
+.form-section {
+  width: 25%;
+}
+
+
+
+// Home-section elements
+
+
+.features-container {
+  padding: 0 20px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.features-container-mini {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-holder {
+  width: 120px;
+
+  i {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+}
+
+
+// For xs and sm screen sizes (? To refactor)
+.icon-holder-mini {
+  width: 90px;
+  i {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+}
+
+
+
+.description {
+  h5 {
+    margin-top: 30px; 
+  }
+}
+
+
+p.small-note {
+  margin-bottom: 6px; // also used in workshops-show and about (landmarks)
+}
+
+
+
+.map-container {
+  width: 100%;
+}
+
+
+
+
+
+
+// Booking request form
+
+.bkg-request {
+  background-color: white;
+  border: 1px solid #dce0e0;
+  border-radius: 2px;
+  margin-top: 35px;
+}
+
+
+.bkg-header {
+  width: 100%;
+  background-color: #333333;
+  
+  h5{
+    font-weight: 300;
+    margin: 0px;
+    padding: 12px 7px;
+    color: white;
+    letter-spacing: 1px;
+  }
+}
+
+
+
+.bkg-details {
+  padding-top: 20px;
+  width: 80%;
+  font-weight: 300;
+  margin: auto;
+
+  p {
+    line-height: 0.9;
+    font-size: 16px;
+  }
+
+  label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 10px;
+  }
+
+
+  
+// Not working :'(
+  input.test-icon {
+    padding: 10px;
+    font-family: FontAwesome, sans-serif;
+    content: "\\f073";
+    font-style: normal;
+    font-weight: 300;
+    text-decoration: inherit;
+  }
+
+}
+
+
+input.fixed-size {
+  margin-top: 20px;
+}
+
+
+
+.direct-contact {
+  width: 80%;
+  margin: 10px auto 20px;
+  text-align: left;
+
+  p {
+    font-size: 14px;
+  }
+
+  .small-note {
+    letter-spacing: 1px;
+  }
+
+  img {
+    width: 25px;
+  }
+}

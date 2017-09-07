@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'about', to: 'pages#about', as: :about
+  get 'accommodation', to: 'pages#accommodation', as: :accommodation
+  get 'blue', to: 'pages#blue', as: :blue
+  get "dashboard", to: "pages#dashboard"
+  get "stylesheet", to: "pages#stylesheet"
+
+  resources :workshops do
+    collection do
+      get 'tailor_made', to: "workshops#tailor_made"
+    end
+  end
+  resources :sessions
+  resources :coaches
+  resources :brequests, only: [:new, :create, :index]
+
+  mount Attachinary::Engine => "/attachinary"
+
+
 end

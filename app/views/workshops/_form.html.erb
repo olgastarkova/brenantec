@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-4 col-sm-offset-4">
+			<%= simple_form_for @workshop  do |f| %>
+				<%= f.input :title %>
+				<%= f.input :description %>
+				<%= f.input :format, as: :radio_buttons,collection: Workshop::TYPES, wrapper: :vertical_radio_and_checkboxes %>
+				<%= f.input :capacity %>
+				<%= f.input :price %>
+				<%= f.association :coach, collection: @coaches, include_blank: false %>
+				<%= f.input :photos, as: :attachinary %>
+				<%= f.submit "Enregistrer", class: "btn btn-primary" %>
+			<% end %>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <h2><%= @coach.name %></h2>
+      <h4 class="customized"><%= @coach.role %></h4>
+      <div class="poem-author-pic">
+        <%= image_tag 'http://placehold.it/50x50', class: "avatar-large" %>
+      </div>
+      <p>
+        <%= simple_format(@coach.intro) %>
+      </p>
+    </div>
+  </div>
+</div>

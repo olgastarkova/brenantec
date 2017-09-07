@@ -1,0 +1,40 @@
+<div class="page">
+	<div class="sidebar hidden-xs hidden-sm hidden-md">
+		<%= render "sidebar" %>
+	</div>
+
+	<div class="content-form">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-10 col-md-offset-1">
+					<div class="row">
+						<div class="col-xs-12">
+							<h2 class="custom top-margin">Nos stages et ateliers</h2>
+						</div>
+					</div>
+					<div class="row">
+						<% @workshops.each do |workshop| %>
+							<div class="col-xs-12 col-sm-4">
+								<%= link_to workshop_path(workshop) do %>
+									<div class="card-w">
+										<div class="class-image-holder">
+											<% workshop.photos.each do |photo|  %>
+												<%= cl_image_tag photo.path, width: 200, height: 200, crop: :fill, class: "card-image-w" %>
+											<% end %>
+										</div>
+																				
+										
+										<div class="card-description-w">
+											<p class="card-note"><%= workshop.format %></p>
+											<p class="card-title"><%= workshop.title %></p>
+										</div>
+									</div>
+								<% end %>
+							</div>
+						<% end %>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

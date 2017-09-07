@@ -1,0 +1,96 @@
+<div class="top-margin">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-10 col-md-offset-1">
+				<div class="row">
+					<div class="col-xs-12 inline-icons">
+						<%= link_to workshops_path do %>
+							<p class="small-note space-after"><i class="fa fa-chevron-circle-left space-right" aria-hidden="true"></i>Revenir à la liste des cours et ateliers</p>
+						<% end %>
+						<div class="workshop-title">
+							<h6 class="customized top-margin space-after"><%= @workshop.format %></h6>
+							<h2 class="custom">« <%= @workshop.title %> »</h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12 col-md-7">
+						<% @workshop.photos.each do |photo|  %>
+							<%= cl_image_tag photo.path, width: 500, height: 350, crop: :fill, class: "card-image-w panoramic-image" %>
+						<% end %>
+						<h4 class="customized">Description</h4>
+						<p><%= simple_format(@workshop.description) %></p>
+					</div>
+					<div class="col-xs-12 col-md-5">
+						<div id="one">
+							<div class="session-list">
+								<h4 class="customized">Prochaines sessions</h4>
+								<div class="session">
+									<div class="session-info">
+										<p><i class="fa fa-calendar space-right" aria-hidden="true"></i> Mercredi, 25 Septembre 2017</p>
+										<p class="fine-print">5 places disponibles</p>
+									</div>
+									<div class="session-control">
+										<a class="btn btn-primary-rose btn-sm">Réserver</a>
+									</div>
+								</div>
+								<div class="session">
+									<div class="session-info">
+										<p><i class="fa fa-calendar space-right" aria-hidden="true"></i> Samedi, 28 Septembre 2017</p>
+										<p class="fine-print">3 places disponibles</p>
+									</div>
+									<div class="session-control">
+										<a class="btn btn-primary-rose btn-sm">Réserver</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-md-6"> 
+					<!-- TO REPLACE WHEN SESSION JSON IS READY -->
+						<div class="program">
+							<h4 class="customized">Programme</h4>
+							<p class="time letter-spaced"><i class="fa fa-clock-o space-right" aria-hidden="true"></i>18h00 - 19h30</p>
+							<p class="aligned">Respiration, détente, étirements, écoute de sa voix intérieure</p>
+							<p class="time letter-spaced"><i class="fa fa-clock-o space-right" aria-hidden="true"></i>19h30 - 20h30* </p>
+							<p class="aligned">Partage autour d’un dîner végétarien</p>
+							<p class="time letter-spaced"><i class="fa fa-clock-o space-right" aria-hidden="true"></i>20h30 - 21h30* </p>
+							<p class="aligned">Partage autour d’un dîner végétarien</p>
+							<p class="fine-print">(*) Etapes optionnelles pour ceux qui le souhaitent</p>
+						</div>
+
+						<h4 class="customized">Taille de groupes</h4>
+						<p>Jusqu'à <%= @workshop.capacity %> personnes maximum</p>
+						
+						<h4 class="customized">Tarifs</h4>
+						<p class="no-bottom-margin"><%= @workshop.price %> EUR *</p>
+						<p class="fine-print">*Prix varie de 9 à 29 € selon les options choisies.</p>
+
+						<h4 class="customized">Autres informations</h4>
+						<p class="inline-icons"><%=image_tag "baby.svg", class: "space-right" %>Possibilité de babysitting sur place pendant les séances.</p>		
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<% content_for(:after_js) do %>
+  <script type="text/javascript">
+    var footer = document.getElementById("two").offsetHeight;
+    function sticky() {
+      if (window.innerWidth < 900) {
+        $("#one").unstick();
+      } else {
+        $("#one").sticky({bottomSpacing: 130 + footer});
+      }
+    };
+    window.addEventListener('load', sticky);
+    window.addEventListener('resize', sticky);
+  </script>
+<% end %>

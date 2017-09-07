@@ -1,0 +1,43 @@
+.session-list {
+	height: auto;
+	width: 100%;
+	border: 1px solid gray;
+	border-radius: 5px;
+
+	h4 {
+		padding-top: 15px;
+		padding-left: 15px;
+	}
+}
+
+
+	.session {
+		display: flex;
+		align-items: top;
+		padding: 10px;
+		transition: all 0.15s ease;
+	}
+
+
+
+.session-info {
+  flex: 1 1 auto;
+  font-size: 16px;
+
+  :first-child {
+  	margin-bottom: 2px;
+  }
+
+  .fine-print {
+  	margin-left: 10px;
+
+  }
+}
+
+
+.session-control {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+}

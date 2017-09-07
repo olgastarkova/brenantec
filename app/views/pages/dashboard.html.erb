@@ -1,0 +1,29 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Welcome to your Dashboard</h3>
+      <h4 class="customized">Coaches</h4>
+      <ul>
+        <% @coaches.each do |coach| %>
+          <li data-coach-id="<%= coach.id %>">
+            <%= coach.name %>: <%= link_to "View", coach_path(coach) %> | <%= link_to "Delete", coach_path(coach), method: :delete, remote: true %>
+          </li>
+        <% end %>
+      </ul>
+      <h4 class="customized">Workshops</h4>
+      <ul>
+        <% @workshops.each do |workshop| %>
+          <li data-workshop-id="<%= workshop.id %>">
+            <%= workshop.title %>: <%= link_to "View", workshop_path(workshop) %> | <%= link_to "Delete", workshop_path(workshop), method: :delete, remote: true %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+  
