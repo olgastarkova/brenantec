@@ -33,7 +33,7 @@
 			  		<div class="bkg-request">
 			  			<div class="bkg-control text-center">
 			  				<%= image_tag 'enveloppe.svg', class: "big-icon" %>
-			  				<%= link_to "Envoyer la demande", workshops_path, class: "btn btn-primary-rose event" %>
+			  				<%= link_to "Envoyer la demande", root_path, class: "btn btn-primary-rose event" %>
 			  			</div>
 			  		</div>
 			  	</div>
@@ -42,3 +42,20 @@
 			
 	</div>
 </div>
+
+
+
+<% content_for(:after_js) do %>
+  <script type="text/javascript">
+    var footer = document.getElementById("two").offsetHeight;
+    function sticky() {
+      if (window.innerWidth < 900) {
+        $(".bkg-request").unstick();
+      } else {
+        $(".bkg-request").sticky({bottomSpacing: 130 + footer});
+      }
+    };
+    window.addEventListener('load', sticky);
+    window.addEventListener('resize', sticky);
+  </script>
+<% end %>
