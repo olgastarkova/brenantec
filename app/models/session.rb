@@ -1,5 +1,4 @@
 class Session < ApplicationRecord
   belongs_to :workshop
-  belongs_to :coach, :through => :workshop
-
+  belongs_to :coach
 end
