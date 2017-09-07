@@ -1,3 +1,5 @@
+// Page "About"
+
 $(document).ready(function () {
   $(".tab").on("click", function(e){
     // Change active tab
@@ -13,3 +15,13 @@ $(document).ready(function () {
 
 
 
+// Pages "Stages et Ateliers"
+
+$(document).ready(function () {
+  $(".alink").on("click", function(e){
+    // Change active tab
+    $(".alink").removeClass('active');
+    $(this).addClass('active');
+  });
+
+});

@@ -41,6 +41,10 @@ class WorkshopsController < ApplicationController
 	def destroy
 		@workshop.destroy
 	end
+
+
+	def tailor_made
+	end
 end
 
 

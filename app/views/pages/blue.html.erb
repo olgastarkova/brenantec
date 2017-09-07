@@ -145,7 +145,7 @@
            <%= f.error_notification %>
            <%= f.input :checkin, as: :string, input_html: { class: "datepicker test-icon", id: "start" }, label: "Arrivée", placeholder: ''  %>
            <%= f.input :checkout, as: :string, input_html: { class: "datepicker test-icon", id: "end" }, label: "Départ", placeholder: '' %>
-           <p><strong>Prix par nuit:</strong> 70 EUR </p>
+           <p><strong>Prix par nuit:</strong><span> 70 EUR</span> </p>
            <p><strong>Nombre de jours:</strong>  <span id = "nb_days"> jours </span></p>
            <p><strong>Prix final:</strong>  <span id = "final_price"> EUR </span></p>
            <%= f.submit "Envoyer la demande", class: 'btn btn-primary-rose fixed-size'%>
