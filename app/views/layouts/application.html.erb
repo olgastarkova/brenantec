@@ -9,9 +9,14 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <link href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
   </head>
-  <body>
+  
+  <% if action_name == 'home' %>
+    <body class="homepage-logo">
+  <% else %>
+    <body>
+  <% end %>
   <!-- Navbar -->
-    <% if controller_name == 'pages' && action_name == 'home' %>
+    <% if action_name == 'home' %>
       <%= render 'shared/navbar' %>
     <% else %>
       <div class="wrapper-navbar-fixed">

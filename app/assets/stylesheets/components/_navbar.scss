@@ -7,8 +7,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  width: 100%;
+  .homepage-logo & {
+    position: absolute;
+  }
 }
+
+
 
 /* Logo */
 .navbar-logo img {
@@ -37,16 +42,27 @@
 // Font styling for navbar (and sidebar)
 
 .nav-link {
-  color: $brand-blue;
+  color: white;
   font-size: 12px;
   font-weight: 300;
   letter-spacing: 1px;
   text-transform: uppercase;
   opacity: 0.8;
   cursor: pointer;
+  color: $brand-blue;
+  .homepage-logo & {
+    color: white;
+  }
 }
 
-
+.homepage-logo {
+  #Oval-blue {
+    stroke: white;
+  }
+  #lotus-blue {
+    fill: white;
+  }
+}
 .nav-link.active {
   font-weight: 700;
 }
