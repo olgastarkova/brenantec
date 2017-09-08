@@ -2,10 +2,10 @@
   display: flex;
   width: 80vw;
   margin: auto;
-  background: RGB(255, 255, 255);
+  background: white;
   justify-content: space-between;
-  height: 150px;
-  padding-top: 50px;
+  align-items: center;
+  height: 120px;
   color: RGB(112, 111, 131);
 }
 .footer-links {
@@ -23,11 +23,15 @@
   opacity: 0.6;
 }
 
+.fa {
+  font-size: 22px;
+}
+
 
 @media (max-width: 600px) {
   .footer {
     flex-direction: column;
-    height: 100px;
+    height: 80px;
     align-items: center;
     padding-bottom: 50px;
   }
