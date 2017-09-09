@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       get 'tailor_made', to: "workshops#tailor_made"
     end
   end
+  resources :programsteps
   resources :sessions
   resources :coaches
   resources :brequests, only: [:new, :create, :index]
