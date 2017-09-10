@@ -50,15 +50,13 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-12 col-md-6"> 
-					<!-- TO REPLACE WHEN SESSION JSON IS READY -->
+					<!-- TO REPLACE  -->
 						<div class="program">
 							<h4 class="customized">Programme</h4>
-							<p class="time letter-spaced"><i class="fa fa-clock-o space-right" aria-hidden="true"></i>18h00 - 19h30</p>
-							<p class="aligned">Respiration, détente, étirements, écoute de sa voix intérieure</p>
-							<p class="time letter-spaced"><i class="fa fa-clock-o space-right" aria-hidden="true"></i>19h30 - 20h30* </p>
-							<p class="aligned">Partage autour d’un dîner végétarien</p>
-							<p class="time letter-spaced"><i class="fa fa-clock-o space-right" aria-hidden="true"></i>20h30 - 21h30* </p>
-							<p class="aligned">voyage sonore et méditatif pour aller à la rencontre de ses ressources intérieures</p>
+							<% @programsteps.each do |programstep | %>
+								<p class="time letter-spaced"><i class="fa fa-clock-o space-right" aria-hidden="true"></i><%= programstep.start_time.strftime("%H:%M") %> - <%= programstep.end_time.strftime("%H:%M") %></p>
+								<p class="aligned"><%= programstep.description %></p>
+							<% end %>
 							<p class="fine-print">(*) Etapes optionnelles pour ceux qui le souhaitent</p>
 						</div>
 

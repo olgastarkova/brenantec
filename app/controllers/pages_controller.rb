@@ -19,6 +19,7 @@ class PagesController < ApplicationController
   def dashboard
     @coaches = Coach.all
     @workshops = Workshop.all
+    @programsteps = Programstep.all
   end
 
 end

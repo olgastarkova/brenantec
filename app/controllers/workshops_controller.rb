@@ -53,6 +53,8 @@ private
 
 	def set_workshop
 		@workshop = Workshop.find(params[:id])
+		@programsteps = Programstep.where(params[:workshop_id])
+
 	end
 
 	def workshop_params
