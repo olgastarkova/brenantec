@@ -1,5 +1,5 @@
 class CoachesController < ApplicationController
-	before_action :set_coach, only: [:show, :update, :destroy]
+	before_action :set_coach, only: [:show, :edit, :update, :destroy]
 
 	def index
 		@coaches = Coach.all

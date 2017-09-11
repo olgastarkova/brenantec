@@ -1,5 +1,5 @@
 class ProgramstepsController < ApplicationController
-before_action :set_programstep, only: [:show, :update, :destroy]
+before_action :set_programstep, only: [:show, :edit, :update, :destroy]
 
 	def index
 		@programsteps = Programstep.all
