@@ -6,6 +6,7 @@ before_action :set_programstep, only: [:show, :edit, :update, :destroy]
 	end
 
 	def show
+
 	end
 
 	def new
@@ -28,7 +29,11 @@ before_action :set_programstep, only: [:show, :edit, :update, :destroy]
 	end
 
 	def update
-		@programstep.update(programstep_params)
+		if @programstep.update(programstep_params)
+			redirect_to workshop_path(params[:programstep][:workshop_id])
+		else
+			render "programsteps/new"
+		end
 	end
 
 	def destroy
