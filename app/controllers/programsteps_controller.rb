@@ -15,6 +15,7 @@ before_action :set_programstep, only: [:show, :edit, :update, :destroy]
 
 	def create
 		@programstep = Programstep.new(programstep_params)
+		@programstep.workshop = Workshop.find(params[:workshop_id])
 		if @programstep.save
 			redirect_to workshop_path(params[:programstep][:workshop_id])
 		else
@@ -23,6 +24,7 @@ before_action :set_programstep, only: [:show, :edit, :update, :destroy]
 	end
 
 	def edit
+		@workshops = Workshop.all
 	end
 
 	def update

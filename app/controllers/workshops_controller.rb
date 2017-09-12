@@ -16,6 +16,7 @@ class WorkshopsController < ApplicationController
 
 	def create
 		@workshop = Workshop.new(workshop_params)
+		@workshop.coach = Coach.find(params[:coach_id])
 		if @workshop.save
 			redirect_to workshop_path(@workshop)
 		else
@@ -24,6 +25,7 @@ class WorkshopsController < ApplicationController
 	end
 
 	def edit
+		@coaches = Coach.all
 	end
 
 

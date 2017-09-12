@@ -23,7 +23,7 @@
       <ul>
         <% @programsteps.each do |programstep| %>
           <li data-programstep-id="<%= programstep.id %>">
-            <%= programstep.description %>: <%= link_to "View", programstep_path(programstep) %> | <%= link_to "Edit", edit_programstep_path(programstep) %> | <%= link_to "Delete", programstep_path(programstep), method: :delete, remote: true %>
+            <%= programstep.description %> <%= link_to "View", programstep_path(programstep) %> | <%= link_to "Edit", edit_programstep_path(programstep) %> | <%= link_to "Delete", programstep_path(programstep), method: :delete, remote: true %>
           </li>
         <% end %>
       </ul>
