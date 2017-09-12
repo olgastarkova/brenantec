@@ -6,6 +6,7 @@ class WorkshopsController < ApplicationController
 	end
 
 	def show
+		@programsteps = @Workshop.programsteps
 	end
 
 	def new
