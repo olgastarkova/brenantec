@@ -8,7 +8,7 @@ class BrequestsController < ApplicationController
     @brequest = Brequest.new(brequest_params)
     if @brequest.save
       redirect_to workshop_path(params[:brequest][:workshop_id])
-
+    end
   end
 
 
