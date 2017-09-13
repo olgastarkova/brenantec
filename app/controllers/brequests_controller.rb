@@ -14,13 +14,12 @@ class BrequestsController < ApplicationController
 
   def show
   end
+end
 
- 
+
+
 private
 
   def brequest_params
     params.require(:brequest).permit(:name, :email, :message, :date, :workshop_id)
   end
-
-
-end
