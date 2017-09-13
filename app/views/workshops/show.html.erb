@@ -33,9 +33,37 @@
 												<p><i class="fa fa-calendar space-right" aria-hidden="true"></i> <%= session.date.strftime("%A, %d %B %Y") %></p>
 												<p class="fine-print"><%= session.available %> places disponibles</p>
 											</div>
-											<div class="session-control">
+<!-- 											<div class="session-control">
 												<a class="btn btn-primary-rose btn-sm">Réserver</a>
-											</div>
+											</div> -->
+
+<!-- Test modal -->
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary-rose btn-sm" data-toggle="modal" data-target="#myModal">
+						  Réserver
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						        <h4 class="modal-title" id="myModalLabel">Inscription</h4>
+						      </div>
+						      <div class="modal-body">
+						        <p>Nombre de participants: ...</p>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						        <button type="button" class="btn btn-primary-rose">Envoyer la demande</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+
+<!-- End test modal -->
+
 										</div>
 									<% end %>
 								<% else %>
