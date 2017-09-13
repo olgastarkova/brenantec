@@ -8,12 +8,13 @@ class WorkshopsController < ApplicationController
 	def show
 		@programsteps = @workshop.programsteps
 		@sessions = @workshop.sessions
+		@brequest = Brequest.new
 	end
 
 	def new
 		@workshop = Workshop.new
 		@coaches = Coach.all
-	end;
+	end
 
 
 	def create

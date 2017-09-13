@@ -10,11 +10,13 @@ Rails.application.routes.draw do
     collection do
       get 'tailor_made', to: "workshops#tailor_made"
     end
+
+    resources :brequests, only: [:new, :create, :index]
   end
   resources :programsteps
   resources :sessions
   resources :coaches
-  resources :brequests, only: [:new, :create, :index]
+  
 
   mount Attachinary::Engine => "/attachinary"
 

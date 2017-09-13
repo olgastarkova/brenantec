@@ -33,37 +33,49 @@
 												<p><i class="fa fa-calendar space-right" aria-hidden="true"></i> <%= session.date.strftime("%A, %d %B %Y") %></p>
 												<p class="fine-print"><%= session.available %> places disponibles</p>
 											</div>
-<!-- 											<div class="session-control">
-												<a class="btn btn-primary-rose btn-sm">Réserver</a>
-											</div> -->
+											<!-- TEST MODAL -->
+											<!-- Button trigger modal -->
+											<button type="button" class="btn btn-primary-rose btn-sm" data-toggle="modal" data-target="#myModal">
+											  Réserver
+											</button>
 
-<!-- Test modal -->
-						<!-- Button trigger modal -->
-						<button type="button" class="btn btn-primary-rose btn-sm" data-toggle="modal" data-target="#myModal">
-						  Réserver
-						</button>
+											<!-- Modal -->
+											<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+											  <div class="modal-dialog" role="document">
+											    <div class="modal-content">
+											      <div class="modal-header">
+											        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											        <h4 class="modal-title" id="myModalLabel">Demande de réservation</h4>
+											      </div>
+											      <div class="modal-body">
+												      <div class="test-row-1">
+												      	<div class="photo-container">
+												        	<% @workshop.photos.each do |photo|  %>
+																<%= cl_image_tag photo.path, class: "card-image-w panoramic-image" %>
+															<% end %>
+												        </div>
+												        <div class="title">
+												        	<h6 class="customized">Date</h6>
+												        	<p>Vendredi, 8 septembre 2017</p>
+												        	<h6 class="customized"><%= @workshop.format %></h6>
+												        	<h5><%= @workshop.title %></h5>
+												        </div>
+												      </div>
+												        
+											        <div class="bkg-details">
+											        	<%= simple_form_for [@workshop, @brequest] do |f| %>
+															<%= f.input :name, label: 'Prénom' %>
+															<%= f.input :email %>
+															<%= f.input :message %>
+															<%= f.submit "Envoyer la demande", class: "btn btn-primary-rose" %>
+														<% end %>
+											        </div>
 
-						<!-- Modal -->
-						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-						  <div class="modal-dialog" role="document">
-						    <div class="modal-content">
-						      <div class="modal-header">
-						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						        <h4 class="modal-title" id="myModalLabel">Inscription</h4>
-						      </div>
-						      <div class="modal-body">
-						        <p>Nombre de participants: ...</p>
-						      </div>
-						      <div class="modal-footer">
-						        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						        <button type="button" class="btn btn-primary-rose">Envoyer la demande</button>
-						      </div>
-						    </div>
-						  </div>
-						</div>
-
-<!-- End test modal -->
-
+											      </div>
+											    </div>
+											  </div>
+											</div>
+											<!-- END OF TEST MODAL -->
 										</div>
 									<% end %>
 								<% else %>
@@ -96,7 +108,6 @@
 						<h4 class="customized">Autres informations</h4>
 						<p class="inline-icons"><%=image_tag "baby.svg", class: "space-right" %>Possibilité de babysitting sur place pendant les séances.</p>		
 					</div>
-				</div>
 				</div>
 			</div>
 		</div>

@@ -1,2 +1,7 @@
-<h1>Brequests#new</h1>
-<p>Find me in app/views/brequests/new.html.erb</p>
+<%= simple_form_for [@workshop, @brequest] do |f| %>
+	<%= f.association :date, collection: @sessions, include_blank: true %>
+	<%= f.input :name %>
+	<%= f.input :email %>
+	<%= f.input :message %>
+	<%= f.submit "Envoyer la demande", class: "btn btn-primary-rose" %>
+<% end %>

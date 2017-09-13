@@ -1,0 +1,17 @@
+.test-row-1 {
+	width: 82%;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	.photo-container {
+		width: 45%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.title {
+		width: 50%;
+	}
+}
