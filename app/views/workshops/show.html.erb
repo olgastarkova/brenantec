@@ -26,24 +26,23 @@
 						<div id="one">
 							<div class="session-list">
 								<h4 class="customized">Prochaines sessions</h4>
-								<div class="session">
-									<div class="session-info">
-										<p><i class="fa fa-calendar space-right" aria-hidden="true"></i> Mercredi, 25 Septembre 2017</p>
-										<p class="fine-print">5 places disponibles</p>
+								<% if @sessions.any? %>
+									<% @sessions.each do |session|  %>
+										<div class="session">
+											<div class="session-info">
+												<p><i class="fa fa-calendar space-right" aria-hidden="true"></i> <%= session.date.strftime("%A, %d %B %Y") %></p>
+												<p class="fine-print"><%= session.available %> places disponibles</p>
+											</div>
+											<div class="session-control">
+												<a class="btn btn-primary-rose btn-sm">Réserver</a>
+											</div>
+										</div>
+									<% end %>
+								<% else %>
+									<div class="session">
+										<p>Aucune session n'est prévue prochainement</p>
 									</div>
-									<div class="session-control">
-										<a class="btn btn-primary-rose btn-sm">Réserver</a>
-									</div>
-								</div>
-								<div class="session">
-									<div class="session-info">
-										<p><i class="fa fa-calendar space-right" aria-hidden="true"></i> Samedi, 28 Septembre 2017</p>
-										<p class="fine-print">3 places disponibles</p>
-									</div>
-									<div class="session-control">
-										<a class="btn btn-primary-rose btn-sm">Réserver</a>
-									</div>
-								</div>
+								<% end %>
 							</div>
 						</div>
 					</div>

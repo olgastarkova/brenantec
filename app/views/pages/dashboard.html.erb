@@ -27,6 +27,14 @@
           </li>
         <% end %>
       </ul>
+      <h4 class="customized">Sessions</h4>
+      <ul>
+        <% @sessions.each do |session| %>
+          <li data-session-id="<%= session.id %>">
+            <span class = "bold"><%= session.workshop.title %></span> - <%= session.date.strftime("%A, %d %B %Y") %> - <%= link_to "View", session_path(session) %> | <%= link_to "Edit", edit_session_path(session) %> | <%= link_to "Delete", session_path(session), method: :delete, remote: true %>
+          </li>
+        <% end %>
+      </ul>
 
 
     </div>

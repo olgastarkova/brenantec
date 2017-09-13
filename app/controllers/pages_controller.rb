@@ -20,6 +20,7 @@ class PagesController < ApplicationController
     @coaches = Coach.all
     @workshops = Workshop.all
     @programsteps = Programstep.all
+    @sessions = Session.all
   end
 
 end

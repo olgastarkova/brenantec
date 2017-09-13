@@ -7,6 +7,7 @@ class WorkshopsController < ApplicationController
 
 	def show
 		@programsteps = @workshop.programsteps
+		@sessions = @workshop.sessions
 	end
 
 	def new
@@ -56,6 +57,7 @@ private
 	def set_workshop
 		@workshop = Workshop.find(params[:id])
 		@programsteps = Programstep.where(params[:workshop_id])
+		@sessions = Session.where(params[:workshop_id])
 
 	end
 
