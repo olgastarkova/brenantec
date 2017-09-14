@@ -1,17 +1,70 @@
-.test-row-1 {
-	width: 82%;
+.modal-row-1 {
+	width: 80%;
 	margin: auto;
-	display: flex;
-	justify-content: space-around;
-	.photo-container {
-		width: 45%;
 
-		img {
-			width: 100%;
-		}
-	}
+	img {
+		width: 100%;
+	}	
 
-	.title {
-		width: 50%;
-	}
+}
+
+
+
+h2.custom {
+	font-size: 27px;
+	margin-top: 5px;
+	padding: 0;
+
+}	
+
+
+h6.customized {
+	margin: 30px 0 0 0;
+}
+
+
+.modal-label {
+	font-size: 10px;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+
+p.modal-label {
+	margin-bottom: 5px;
+}
+
+
+
+.modal-body {
+	margin-bottom: 30px;
+}
+
+
+
+// CSS for Input Incrementor
+#myform {
+    padding: 5px;
+}
+.qty {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+}
+
+input.qtyplus {
+	width: 25px; 
+	height: 25px;
+}
+
+
+input.qtyminus {
+	width: 25px; 
+	height: 25px;
+}
+
+
+span.inline {
+	display: inline !important;
 }

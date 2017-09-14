@@ -3,7 +3,7 @@
 		<div class="col-xs-12 col-sm-4 col-sm-offset-4">
 			<%= simple_form_for @session  do |f| %>
 				<%= f.association :workshop, collection: @workshops, include_blank: true %>
-				<%= f.input :date %>
+				<%= f.input :date, as: :string, input_html: { class: "datepicker" }  %>
 				<%= f.input :available %>
 				<%= f.submit "Enregistrer", class: "btn btn-primary" %>
 			<% end %>

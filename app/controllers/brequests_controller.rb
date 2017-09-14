@@ -7,7 +7,7 @@ class BrequestsController < ApplicationController
   def create
     @brequest = Brequest.new(brequest_params)
     if @brequest.save
-      redirect_to workshop_path(params[:brequest][:workshop_id])
+      redirect_to workshop_path(params[:workshop_id])
     end
   end
 
@@ -21,5 +21,5 @@ end
 private
 
   def brequest_params
-    params.require(:brequest).permit(:name, :email, :message, :date, :workshop_id)
+    params.require(:brequest).permit(:name, :email, :message, :date, :workshop_id, :checkin, :checkout, :nb_guests)
   end

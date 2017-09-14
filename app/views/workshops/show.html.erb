@@ -33,7 +33,9 @@
 												<p><i class="fa fa-calendar space-right" aria-hidden="true"></i> <%= session.date.strftime("%A, %d %B %Y") %></p>
 												<p class="fine-print"><%= session.available %> places disponibles</p>
 											</div>
-											<!-- TEST MODAL -->
+											
+										<!-- BEGINNING OF MODAL -->
+											
 											<!-- Button trigger modal -->
 											<button type="button" class="btn btn-primary-rose btn-sm" data-toggle="modal" data-target="#myModal">
 											  Réserver
@@ -48,34 +50,41 @@
 											        <h4 class="modal-title" id="myModalLabel">Demande de réservation</h4>
 											      </div>
 											      <div class="modal-body">
-												      <div class="test-row-1">
-												      	<div class="photo-container">
-												        	<% @workshop.photos.each do |photo|  %>
-																<%= cl_image_tag photo.path, class: "card-image-w panoramic-image" %>
-															<% end %>
-												        </div>
-												        <div class="title">
-												        	<h6 class="customized">Date</h6>
-												        	<p>Vendredi, 8 septembre 2017</p>
-												        	<h6 class="customized"><%= @workshop.format %></h6>
-												        	<h5><%= @workshop.title %></h5>
-												        </div>
-												      </div>
-												        
-											        <div class="bkg-details">
-											        	<%= simple_form_for [@workshop, @brequest] do |f| %>
+												    <div class="modal-row-1">
+											        	<% @workshop.photos.each do |photo|  %>
+															<%= cl_image_tag photo.path, class: "card-image-w panoramic-image" %>
+														<% end %>
+											        	<h6 class="customized"><%= @workshop.format %></h6>
+											        	<h2 class="custom"><%= @workshop.title %></h5>
+											        	<p class="modal-label space-before">Date</p>
+											        	<p class="small-note">Vendredi, 22 septembre 2017</p>
+											        	<p class="modal-label space-before">Nombre de participants</p>
+
+														<!-- Fake input number incrementor managing simple form hidden input-->
+														<form id='myform' method='POST' action='#'>
+														    <input type='button' value="-" class='qtyminus' field='quantity' />
+														    <input type='text' name='quantity' value='1' class='qty' />
+														    <input type='button' value='+' class='qtyplus' field='quantity' />
+														</form>
+														<!-- end fake input -->
+										
+												    </div>
+												    <div class="bkg-details">
+												      	<%= simple_form_for [@workshop, @brequest] do |f| %>
 															<%= f.input :name, label: 'Prénom' %>
 															<%= f.input :email %>
 															<%= f.input :message %>
-															<%= f.submit "Envoyer la demande", class: "btn btn-primary-rose" %>
-														<% end %>
-											        </div>
+															<%= f.input :nb_guests, as: :hidden, input_html: { class: "qty", value: "1"  } %>
+															<%= f.submit "Envoyer la demande", class: "btn btn-primary-rose" %>																
+															</span>
 
+														<% end %>	
+													</div>
 											      </div>
 											    </div>
 											  </div>
 											</div>
-											<!-- END OF TEST MODAL -->
+										<!-- END OF MODAL -->
 										</div>
 									<% end %>
 								<% else %>
@@ -115,6 +124,8 @@
 </div>
 
 
+
+<!-- JS for sticky scrolling -->
 <% content_for(:after_js) do %>
   <script type="text/javascript">
     var footer = document.getElementById("two").offsetHeight;
@@ -129,3 +140,48 @@
     window.addEventListener('resize', sticky);
   </script>
 <% end %>
+
+
+
+
+<!-- Jquery for Input Incrementor -->
+<script type="text/javascript" >
+	window.onload = function() {
+		$(document).ready(function(){
+		    // This button will increment the value
+		    $('.qtyplus').click(function(e){
+		        // Stop acting like a button
+		        e.preventDefault();
+		        // Get the field name
+		        fieldName = $(this).attr('field');
+		        // Get its current value
+		        var currentVal = parseInt($('input[name='+fieldName+']').val());
+		        // If is not undefined
+		        if (!isNaN(currentVal)) {
+		            // Increment
+		            $('input[name='+fieldName+']').val(currentVal + 1);
+		        } else {
+		            // Otherwise put a 0 there
+		            $('input[name='+fieldName+']').val(0);
+		        }
+		    });
+		    // This button will decrement the value till 0
+		    $(".qtyminus").click(function(e) {
+		        // Stop acting like a button
+		        e.preventDefault();
+		        // Get the field name
+		        fieldName = $(this).attr('field');
+		        // Get its current value
+		        var currentVal = parseInt($('input[name='+fieldName+']').val());
+		        // If it isn't undefined or its greater than 0
+		        if (!isNaN(currentVal) && currentVal > 0) {
+		            // Decrement one
+		            $('input[name='+fieldName+']').val(currentVal - 1);
+		        } else {
+		            // Otherwise put a 0 there
+		            $('input[name='+fieldName+']').val(0);
+		        }
+		    });
+		});
+	}
+</script>
