@@ -37,3 +37,18 @@ span.numbers {
 	    margin-right: 20px;
   }
 }
+
+
+// Additional style for the info form - main styles are in blue.css
+
+.bkg-details.about {
+	margin: 0;
+	padding-top: 0;
+}
+
+
+@media (max-width: 992px) {
+    .bkg-details.about {
+        margin: auto;
+    }
+}

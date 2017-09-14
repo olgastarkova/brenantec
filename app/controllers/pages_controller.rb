@@ -4,6 +4,7 @@ class PagesController < ApplicationController
 
 
   def about
+    @brequest = Brequest.new
   end
 
   def accommodation

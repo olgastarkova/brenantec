@@ -263,6 +263,14 @@
               <div class="top-margin bottom-margin">
                 <p>Si vous n’avez pas trouvé toutes les réponses à vos questions, n’hésitez pas à me contacter par téléphone ou par email ou en remplissant le formulaire ci-dessous.</p>
               </div>
+              <div class="bkg-details about">
+                    <%= simple_form_for [@brequest] do |f| %>
+                  <%= f.input :name, label: 'Prénom' %>
+                  <%= f.input :email %>
+                  <%= f.input :message %>
+                  <%= f.submit "Envoyer", class: "btn btn-primary-rose bottom-margin" %> 
+                <% end %> 
+              </div>
             </div>
             <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4">
               <h3 class="handwritten no-top-margin">Isabelle Lagane-Millet</h3>
