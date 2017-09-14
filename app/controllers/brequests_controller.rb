@@ -6,6 +6,7 @@ class BrequestsController < ApplicationController
 
   def create
     @brequest = Brequest.new(brequest_params)
+    @brequest.nb_guests = brequest_params[:nb_guests].to_i
     if @brequest.save
       redirect_to workshop_path(params[:workshop_id])
     end
