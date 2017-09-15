@@ -48,6 +48,7 @@ class WorkshopsController < ApplicationController
 
 
 	def tailor_made
+		@brequest = Brequest.new
 	end
 end
 
