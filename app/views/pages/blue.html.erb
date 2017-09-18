@@ -148,12 +148,15 @@
            <p><strong>Prix par nuit:</strong><span> 70 EUR</span> </p>
            <p><strong>Nombre de jours:</strong>  <span id = "nb_days"> jours </span></p>
            <p><strong>Prix final:</strong>  <span id = "final_price"> EUR </span></p>
-           <%= f.submit "Envoyer la demande", class: 'btn btn-primary-rose fixed-size'%>
+           <%= f.submit "Envoyer la demande", class: 'btn btn-primary-rose fixed-size-sf text-center'%>
           <% end %>
         </div>
         
         <div class="bkg-control text-center">
-          <a href="https://www.abritel.fr/location-vacances/p6081247a" target="blank" class="btn btn-abritel fixed-size"><%=image_tag "abritel-logo.svg", class: "space-right" %>Réserver sur Abritel</a>
+          <a href="https://www.abritel.fr/location-vacances/p6081247a" target="blank" class="btn btn-agency abritel fixed-size"><%=image_tag "abritel-logo.svg", class: "space-right" %>Réserver sur Abritel</a>
+        </div>
+        <div class="bkg-control text-center">
+          <a href="https://www.airbnb.com/rooms/20894862?location=Sauzon%2C%20France" target="blank" class="btn btn-agency airbnb fixed-size"><%=image_tag "airbnb_logo.png", class: "space-right" %>Réserver sur AirBnB</a>
         </div>
         <div class="direct-contact">
           <p class="fine-print">Vous pouvez également me contacter directement: </p>

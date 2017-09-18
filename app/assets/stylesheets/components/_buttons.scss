@@ -35,10 +35,7 @@
 
 
 
-.btn-abritel {
-	background-color: white;
-	color: $brand-blue;
-	border: 1px solid $brand-blue;
+.btn-agency {
 	border-radius: 15px;
 	font-size: 12px;
 	text-transform: uppercase;
@@ -46,21 +43,55 @@
 	padding: 10px 10px;
 	letter-spacing: 2px;
 	opacity: 0.9;
-	margin: 10px;
+	margin-top: 15px;
+	background-color: white;
+	border-style: solid;
+	border-width: 1px;
 
 	img {
 		width: 35px;
 	}
 }
 
-.btn-abritel:hover {
-	border: 2px solid $brand-blue;
+.btn-agency:hover {
 	transition: color 0.3s ease;
-	color: $brand-blue;
 	font-weight: 700;
+	border-width: 2px;
+	border-style: solid;
 }
+
+
+.abritel {
+	color: $brand-blue;
+	border-color: $brand-blue;
+}
+
+.airbnb {
+	color: #fd5c63;
+	border-color: #fd5c63;
+}
+
+
+.abritel:hover {
+	color: $brand-blue;
+}
+
+.airbnb:hover {
+	color: #fd5c63;	
+}
+
+
+
+
 
 .fixed-size {
 	height: 50px;
 	width: 230px;
+}
+
+
+.fixed-size-sf {
+	width: 100%;
+	height: 50px;
+	margin-top: 15px;
 }
