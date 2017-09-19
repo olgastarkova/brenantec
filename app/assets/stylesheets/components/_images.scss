@@ -59,3 +59,17 @@ img.panoramic-image {
 	width: 80px;
 	margin: 50px auto 25px;
 }
+
+
+.side-image {
+  width: 100%;
+  margin: auto;
+}
+
+
+@media (min-width: 1441px) {
+  .side-image {
+    max-height: 500px;
+    width: auto;
+  }
+}

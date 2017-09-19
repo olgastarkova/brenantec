@@ -56,3 +56,20 @@ span.numbers {
         margin: auto;
     }
 }
+
+
+
+.phrase-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  h2 {
+  	text-align: center;
+  }
+}
+
+
+.test-text {
+	margin: 30px 15px 15px;
+}
