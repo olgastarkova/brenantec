@@ -5,7 +5,24 @@ img.panoramic-image {
     height: auto;
 }
 
+.big-avatar {
+  object-fit: cover;
+  width: 90%;
+  max-width: 180px;
+  max-height: 180px;
+  margin: auto;
+}
 
+
+.round{
+  border-radius: 50%;
+}
+
+// .squared {
+//   object-fit: cover;
+//   width: 150px;
+//   height: 150px;
+// }
 
 // Icons
 
