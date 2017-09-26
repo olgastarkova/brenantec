@@ -18,30 +18,39 @@
     <div class="tab-content top-margin" id="maisons">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xs-12 col-md-8 col-md-offset-1">
-            <div class="col-xs-12 col-sm-4">
-              <%= image_tag "isabelle.png", class: "big-avatar squared round top-margin" %>      
-            </div>
+          <div class="col-xs-12 col-md-10 col-md-offset-1">  
+            <h2 class="custom">Bonjour,</h2>
+            
             <div class="col-xs-12 col-sm-8">
-              <p>Bonjour,</p>
               <p>Je suis Isabelle. Mère et grand-mère, et parallèlement « conseil en communication » pour les entreprises pendant presque toute ma vie active de salariée puis de chef d’entreprise, j’ai ressenti le besoin de travailler plus directement avec les individus qui constituent l’entreprise, afin des les accompagner dans leurs chemins qu’ils soient professionnels ou personnels.</p>
               <p>Par ailleurs, amatrice de cuisine végétale, du bord de mer, des algues et des plantes sauvages comestibles, j’ai posé mes valises à Belle Ile en Mer.</p>
               <p>Aujourd’hui, je trouve mon énergie en mettant ces savoir-faire et mon espace de vie à disposition de ceux qui cheminent sur ces sentiers et veulent faire le plein d’énergie.</p>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <%= image_tag "isabelle.png", class: "side-image portrait" %>      
             </div>
             <div class="col-xs-12">
               <div class="phrase-container">
                 <h2 class="handwritten honey top-margin bottom-margin">... Une parenthèse hors du temps, un lieu pour se ressourcer sur tous les plans ...</h2>
               </div>
-              <%= image_tag "belle-ile_phares-lever_du_soleil.jpg" %>
-              <div class="test-text">
+              <div class="test-image">
+                <%= image_tag "belle-ile_phares-lever_du_soleil.jpg" %>
+              </div>
+                
+              <div class="full-width-text">
                 <p>Le temps y perd ses repères et s’étire parfois ou se resserre au gré du soleil et du vent. Le  silence de sa nature, vivante, nous renvoie à notre essentiel ; aux antipodes du désordre sonore et visuel, nous sommes connectés directement à notre réalité, notre essence. L’énergie de ce caillou entre ciel et mer inonde généreusement  tous nos pores, et recycle tout ce que nous sommes prêts à lâcher pour avancer plus légers sur nos routes.</p>
               </div>
               <div class="top-margin">
-                <div class="col-xs-12 col-sm-7">
-                  <%= image_tag "port-de-sauzon.jpg", class: "side-image" %>
+                <div class="col-xs-12 col-sm-6 test-image">
+                  <%= image_tag "port-de-sauzon.jpg", class:"space-after" %>
                 </div>
-                <div class="col-xs-12 col-sm-5">
-                  <p>Puis est venue une deuxième évidence. Disposant maintenant de trois très grands luxes que sont <strong>le temps</strong>, après une vie professionnelle dans la communication et l’accompagnement, je peux profiter au quotidien de la magie de cette si belle ile, <strong>une maison</strong> belliloise douillette et chaleureuse,  aménagée avec amour depuis 30 ans <strong>la liberté</strong> de choisir quoi faire de mon énergie vitale, de partager ce qui m’anime et mon espace de vie.</p>
+                <div class="col-xs-12 col-sm-6">
+                  <p>Puis est venue une deuxième évidence. Disposant maintenant de trois très grands luxes que sont: 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-clock-o" aria-hidden="true"></i><strong> le temps</strong>, après une vie professionnelle dans la communication et l’accompagnement, je peux profiter au quotidien de la magie de cette si belle ile,</li> 
+                    <li><i class="fa fa-home" aria-hidden="true"></i><strong> une maison</strong> belliloise douillette et chaleureuse, aménagée avec amour depuis 30 ans et</li>
+                    <li><i class="fa fa-pagelines" aria-hidden="true"></i><strong> la liberté</strong> de choisir quoi faire de mon énergie vitale, de partager ce qui m’anime et mon espace de vie.</p></li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -289,7 +298,7 @@
                 <p>Si vous n’avez pas trouvé toutes les réponses à vos questions, n’hésitez pas à me contacter par téléphone ou par email ou en remplissant le formulaire ci-dessous.</p>
               </div>
               <div class="bkg-details about">
-                    <%= simple_form_for [@brequest] do |f| %>
+                  <%= simple_form_for [@brequest] do |f| %>
                   <%= f.input :name, label: 'Prénom' %>
                   <%= f.input :email %>
                   <%= f.input :message %>
