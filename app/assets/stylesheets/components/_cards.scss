@@ -114,37 +114,36 @@
 
 // Workshops page
 
-.card-w {
+.card-workshop {
   width: 230px;
   height: 335px;
   margin: 20px auto;
   border: 1px solid #979797;
 
-  .class-image-holder {
+
+  .image-holder {
     width: 100%;
     height: 230px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-  }
 
-  .card-image-w {
-    margin: 0;
-    max-width: 100%;
-    height: auto;
-    box-shadow: 1px 1px 4px #E6E6E6;
+    img {
+      margin: 0;
+      max-width: 100%;
+      height: auto;
+      box-shadow: 1px 1px 4px #E6E6E6;
+    }
   }
-
 }
 
-
-.card-description-w {
+.description-workshop {
   width: 190px;
   margin: auto;
   text-align: left;
   color: #333333;
 
-  .card-note {
+  .note {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -152,10 +151,62 @@
     margin-bottom: 5px;
   }
 
-  .card-title {
+  .title {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.3;
+  }
+}
+
+
+// Card Coaches
+.card-coach {
+  width: 98%;
+  margin-bottom: 20px;
+
+  .photo-holder {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    img {
+      min-width: 80%;
+      height: auto;
+      border-radius: 50%;
+    }
+  }
+}
+
+.description-coach {
+  width: 90%;
+  margin: auto;
+  color: #333333;
+
+  .title {
+    text-align: center;
+    font-weight: 300;
+
+
+    &.name {
+      font-size: 24px;
+      margin-bottom: 0;
+      margin-top: 15px;
+    }
+
+    &.fine-print {
+      letter-spacing: 1px;
+    }
+  }
+
+  .small-note {
+    margin-top: 30px; 
+  }
+
+  .read-more {
+    font-size: 13px;
+    text-align: right;
+    color: $brand-rose;
   }
 }
 

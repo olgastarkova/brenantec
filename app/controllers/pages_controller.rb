@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 
   def about
     @brequest = Brequest.new
+    @coaches = Coach.all
   end
 
   def accommodation

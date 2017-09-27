@@ -19,8 +19,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-xs-12 col-md-10 col-md-offset-1">  
-            <h2 class="custom">Bonjour,</h2>
-            
+            <h2 class="custom">Bonjour,</h2> 
             <div class="col-xs-12 col-sm-8">
               <p>Je suis Isabelle. Mère et grand-mère, et parallèlement « conseil en communication » pour les entreprises pendant presque toute ma vie active de salariée puis de chef d’entreprise, j’ai ressenti le besoin de travailler plus directement avec les individus qui constituent l’entreprise, afin des les accompagner dans leurs chemins qu’ils soient professionnels ou personnels.</p>
               <p>Par ailleurs, amatrice de cuisine végétale, du bord de mer, des algues et des plantes sauvages comestibles, j’ai posé mes valises à Belle-Ile-en-Mer.</p>
@@ -45,21 +44,49 @@
                   <%= image_tag "port-de-sauzon.jpg", class:"space-after" %>
                 </div>
                 <div class="col-xs-12 col-sm-6">
-                  <p>Puis est venue une deuxième évidence. Disposant maintenant de trois très grands luxes que sont: 
+                  <p>Puis est venue une deuxième évidence. Disposant maintenant de trois très grands luxes que sont:</p>
                   <ul class="list-unstyled">
                     <li><%=image_tag "clock-grey.svg", class: "space-right" %><strong> le temps</strong>, après une vie professionnelle dans la communication et l’accompagnement, je peux profiter au quotidien de la magie de cette si belle ile,</li> 
                     <br>
                     <li><%=image_tag "house-grey.svg", class: "space-right" %><strong> une maison</strong> belliloise douillette et chaleureuse, aménagée avec amour depuis 30 ans et</li>
                     <br>
-                    <li><%=image_tag "birds-grey.svg", class: "space-right" %><strong> la liberté</strong> de choisir quoi faire de mon énergie vitale, de partager ce qui m’anime et mon espace de vie.</p></li>
+                    <li><%=image_tag "birds-grey.svg", class: "space-right" %><strong> la liberté</strong> de choisir quoi faire de mon énergie vitale, de partager ce qui m’anime et mon espace de vie.</li>
                   </ul>
                 </div>
+              </div>
+
+            </div>
+            <div class="col-xs-12">
+              <h3 class="customized">Equipe de Sentiers de Soi</h3>
+              <div class="cards">
+                <% @coaches.each do |coach| %>
+                  <div class="col-xs-12 col-sm-6 col-md-4">
+                    <%= link_to coach_path(coach) do %>
+                      <div class="card-coach">
+                        <div class="photo-holder">
+                            <%= image_tag 'http://placehold.it/180x180', class: "text-center" %>
+                        </div>
+                        <div class="description-coach">
+                          <p class="title name honey"><%= coach.name %></p>
+                          <p class="title fine-print"><%= coach.role %></p>
+                          <p class="small-note"><%= simple_format truncate(coach.intro, length: 200, separator: ' ') %></p>
+                          <p class="read-more">Lire la suite</p>
+                        </div>
+                      </div>
+                    <% end %>
+                  </div>
+                <% end %>              
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+
+    <!-- test -->
+
+    <!-- test -->
 
 
 

@@ -14,17 +14,17 @@
 						<% @workshops.each do |workshop| %>
 							<div class="col-xs-12 col-sm-4">
 								<%= link_to workshop_path(workshop) do %>
-									<div class="card-w">
-										<div class="class-image-holder">
+									<div class="card-workshop">
+										<div class="image-holder">
 											<% workshop.photos.each do |photo|  %>
-												<%= cl_image_tag photo.path, width: 200, height: 200, crop: :fill, class: "card-image-w" %>
+												<%= cl_image_tag photo.path, width: 200, height: 200, crop: :fill %>
 											<% end %>
 										</div>
 																				
 										
-										<div class="card-description-w">
-											<p class="card-note"><%= workshop.format %></p>
-											<p class="card-title"><%= workshop.title %></p>
+										<div class="description-workshop">
+											<p class="note"><%= workshop.format %></p>
+											<p class="title"><%= workshop.title %></p>
 										</div>
 									</div>
 								<% end %>
