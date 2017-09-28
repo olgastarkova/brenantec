@@ -54,8 +54,18 @@
                   </ul>
                 </div>
               </div>
-
             </div>
+            <div class="full-width-text">
+                <p>J’ai choisi de mettre toute la magie de ce lieu à la disposition de ceux qui cheminent sur leurs propres sentiers et qui souhaitent :
+                  <ul>
+                    <li>découvrir Belle Ile autre</li>
+                    <li>faire une pause dans leur vie trépidante</li>
+                    <li>refaire le plein d’énergie vitale</li>
+                    <li>redécouvrir les essentiels de la vie, la votre et celle de la nature autour</li>
+                    <li>se ressourcer sur tous les plans : corps, âme et esprit.</li>
+                  </ul>
+                </p>
+              </div>
             <div class="col-xs-12">
               <h3 class="customized">Equipe de Sentiers de Soi</h3>
               <div class="cards">
@@ -65,7 +75,7 @@
                       <div class="card-coach">
                         <div class="photo-holder">
                           <% if coach.photo? %>
-                            <%= cl_image_tag coach.photo.path, width: 180, height: 180, crop: :fill, class: "text-center" %>
+                            <%= cl_image_tag coach.photo.path, width: 150, height: 150, crop: :fill, class: "text-center" %>
                           <% else %>
                             <%= image_tag 'http://placehold.it/180x180', class: "text-center" %>
                           <% end %>

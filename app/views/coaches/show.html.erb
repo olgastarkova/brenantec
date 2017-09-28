@@ -4,7 +4,11 @@
       <h2><%= @coach.name %></h2>
       <h6 class="customized"><%= @coach.role %></h6>
       <div class="poem-author-pic">
-        <%= cl_image_tag @coach.photo.path, width: 200, height: 200, crop: :fill %>
+        <% if @coach.photo? %>
+          <%= cl_image_tag @coach.photo.path, width: 200, height: 200, crop: :fill, gravity: :face %>
+        <% else %>
+          <%= image_tag 'http://placehold.it/180x180', class: "text-center" %>
+        <% end %>
       </div>
       <p>
         <%= simple_format(@coach.intro) %>

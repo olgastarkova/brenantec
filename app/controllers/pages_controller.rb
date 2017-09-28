@@ -5,7 +5,7 @@ class PagesController < ApplicationController
 
   def about
     @brequest = Brequest.new
-    @coaches = Coach.all
+    @coaches = Coach.all.order(:id)
   end
 
   def accommodation
