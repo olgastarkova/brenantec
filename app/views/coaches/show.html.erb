@@ -2,13 +2,14 @@
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
       <h2><%= @coach.name %></h2>
-      <h4 class="customized"><%= @coach.role %></h4>
+      <h6 class="customized"><%= @coach.role %></h6>
       <div class="poem-author-pic">
-        <%= image_tag 'http://placehold.it/50x50', class: "avatar-large" %>
+        <%= cl_image_tag @coach.photo.path, width: 200, height: 200, crop: :fill %>
       </div>
       <p>
         <%= simple_format(@coach.intro) %>
       </p>
+      <%= link_to 'Revenir à la page principale', url_for(:back) %>
     </div>
   </div>
 </div>

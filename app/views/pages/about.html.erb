@@ -32,7 +32,7 @@
               <div class="phrase-container">
                 <h2 class="handwritten blue-font top-margin bottom-margin">... Une parenthèse hors du temps, un lieu pour se ressourcer sur tous les plans ...</h2>
               </div>
-              <div class="test-image">
+              <div class="image-about">
                 <%= image_tag "belle-ile_phares-lever_du_soleil.jpg" %>
               </div>
                 
@@ -40,7 +40,7 @@
                 <p>Le temps y perd ses repères et s’étire parfois ou se resserre au gré du soleil et du vent. Le  silence de sa nature, vivante, nous renvoie à notre essentiel ; aux antipodes du désordre sonore et visuel, nous sommes connectés directement à notre réalité, notre essence. L’énergie de ce caillou entre ciel et mer inonde généreusement  tous nos pores, et recycle tout ce que nous sommes prêts à lâcher pour avancer plus légers sur nos routes.</p>
               </div>
               <div class="top-margin">
-                <div class="col-xs-12 col-sm-6 test-image">
+                <div class="col-xs-12 col-sm-6 image-about">
                   <%= image_tag "port-de-sauzon.jpg", class:"space-after" %>
                 </div>
                 <div class="col-xs-12 col-sm-6">
@@ -64,7 +64,11 @@
                     <%= link_to coach_path(coach) do %>
                       <div class="card-coach">
                         <div class="photo-holder">
+                          <% if coach.photo? %>
+                            <%= cl_image_tag coach.photo.path, width: 180, height: 180, crop: :fill, class: "text-center" %>
+                          <% else %>
                             <%= image_tag 'http://placehold.it/180x180', class: "text-center" %>
+                          <% end %>
                         </div>
                         <div class="description-coach">
                           <p class="title name honey"><%= coach.name %></p>
@@ -84,9 +88,6 @@
     </div>
 
 
-    <!-- test -->
-
-    <!-- test -->
 
 
 

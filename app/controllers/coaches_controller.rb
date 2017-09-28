@@ -25,7 +25,11 @@ class CoachesController < ApplicationController
 	end
 
 	def update
-		@coach.update(coach_params)
+		if @coach.update(coach_params)
+			redirect_to coach_path(@coach)
+		else
+			render "coaches/edit"
+		end
 	end
 
 	def destroy
@@ -42,5 +46,5 @@ end
 	end
 
 	def coach_params
-		params.require(:coach).permit(:name, :role, :intro, :active)
+		params.require(:coach).permit(:name, :role, :intro, :active, :photo)
 	end
