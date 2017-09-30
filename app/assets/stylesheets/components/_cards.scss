@@ -211,3 +211,29 @@
 }
 
 
+
+
+// TEST CARDS 3 LUXE
+
+.cards-luxe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .card {
+    flex: 1 0 30%;
+    border: 1px solid $brand-light-gray;
+    margin: 15px;
+
+    img {
+      width: 40px;
+      margin-left: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 10px 15px;
+    }
+  }
+}
+
