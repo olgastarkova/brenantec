@@ -67,6 +67,10 @@ h3.customized {
 	color: #DCAE1D; // brand-honey
 	padding-top: 30px;
   	padding-bottom: 15px;
+
+  	&.no-top-padding {
+  		padding-top: 0;
+  	}
 }
 
 
