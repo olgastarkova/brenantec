@@ -53,7 +53,7 @@ class WorkshopsController < ApplicationController
 
 	def agenda
 		sessions = Session.all
-		@session_months = sessions.group_by { |session| session[:date].month }
+		@session_months = sessions.group_by { |session| session[:date].strftime("%B %Y") }
 
 	end
 end

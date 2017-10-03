@@ -237,3 +237,43 @@
   }
 }
 
+
+
+
+.card-workshop.agenda {
+  position: relative;
+}
+
+.date-label {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: $brand-blue;
+  color: white;
+  top: -15px;
+  left: -15px;
+  opacity: 0.9;
+
+
+  p {
+    margin: 0 3px;
+  }
+
+  p.week {
+    letter-spacing: 1px;
+    padding-top: 2px;
+  }
+
+  p.day {
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  p.month {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+
+}
