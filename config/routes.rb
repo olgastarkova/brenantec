@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :workshops do
     collection do
       get 'tailor_made', to: "workshops#tailor_made"
+      get 'agenda', to: "workshops#agenda"
     end
 
     resources :brequests, only: [:new, :create]

@@ -1,0 +1,40 @@
+<div class="page">
+	<%= render "sidebar" %>
+
+	<div class="content-form">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-md-10 col-md-offset-1">
+					<div class="row">
+						<div class="col-xs-12">
+							<h2 class="custom top-margin">Agenda 2017 - 2018</h2>
+						</div>
+					</div>
+					<div class="row">
+						<% @session_months.each do |session| %>
+							<div class="col-xs-12 col-sm-4">
+								<%= link_to session_path(session) do %>
+									<div class="card-workshop">
+										<div class="image-holder">
+											<% session.workshop.photos.each do |photo|  %>
+												<%= cl_image_tag photo.path, width: 200, height: 200, crop: :fill %>
+											<% end %>
+										</div>
+																				
+										
+										<div class="description-workshop">
+											<p class="note"><%= session.workshop.format %></p>
+											<p class="title"><%= session.workshop.title %></p>
+											<p class="fine-print"><%= session.date.strftime("%A, %d %B %Y") %></p>
+										</div>
+									</div>
+								<% end %>
+							</div>
+						<% end %>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

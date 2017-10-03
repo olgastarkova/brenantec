@@ -50,6 +50,12 @@ class WorkshopsController < ApplicationController
 	def tailor_made
 		@brequest = Brequest.new
 	end
+
+	def agenda
+		sessions = Session.all
+		@session_months = sessions.group_by { |session| session[:date].month }
+
+	end
 end
 
 
