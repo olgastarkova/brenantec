@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-md-10 col-md-offset-1">
+			<h3>Vos demandes de réservations</h3>
+			<div class="team">
+				<% if @brequests.any? %>
+					<% @brequests.each do |brequest| %>
+						<h5><%= brequest.name %></h5>
+						<p class="fine-print"><%= brequest.email %></p>
+						<p><%= brequest.message %></p>
+					<% end %>
+				<% else %>
+					<p>Le contenu arrive bientôt :)</p>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

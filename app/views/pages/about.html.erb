@@ -365,6 +365,7 @@
                   <%= f.input :name, label: 'Prénom' %>
                   <%= f.input :email %>
                   <%= f.input :message, :input_html => {:rows => 8} %>
+                  <%= f.input :subject, as: :hidden, input_html: { value: "contact"  } %>
                   <%= f.submit "Envoyer", class: "btn btn-primary-rose bottom-margin" %> 
                 <% end %> 
               </div>

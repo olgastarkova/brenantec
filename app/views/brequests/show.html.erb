@@ -1,2 +1,17 @@
-<h1>Brequests#show</h1>
-<p>Find me in app/views/brequests/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <h2 class="custom">Demande de réservation</h2>
+      <h6 class="customized honey">Nom</h6>
+      <p><%= @brequest.name %></p>
+      <h6 class="customized honey">Email</h6>
+      <p><%= @brequest.email%></p>
+      <h6 class="customized honey">Message</h6>
+      <p><%= simple_format(@brequest.message) %></p>
+      <h6 class="customized honey">Nombre de participants</h6>
+      <p><%= @brequest.nb_guests%></p>
+      <p class="small-note"><%= link_to '<< Revenir en arrière', url_for(:back) %></p>
+      
+    </div>
+  </div>
+</div>

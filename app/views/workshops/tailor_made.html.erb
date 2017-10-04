@@ -129,6 +129,7 @@
 											<%= f.input :name, label: 'Prénom' %>
 											<%= f.input :email %>
 											<%= f.input :message %>
+											<%= f.input :subject, as: :hidden, input_html: { value: "tailor_made"  } %>
 											<p class="modal-fine-print">N'oubliez pas de spécifier les dates de votre événement, le format souhaité et le nombre de participants. Merci et à très vite !</p>
 											<%= f.submit "Envoyer la demande", class: "btn btn-primary-rose" %>	
 										<% end %>	

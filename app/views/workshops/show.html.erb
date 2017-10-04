@@ -75,6 +75,7 @@
 															<%= f.input :email %>
 															<%= f.input :message %>
 															<%= f.input :nb_guests, as: :hidden, input_html: { class: "qty", value: "1"  } %>
+															<%= f.input :subject, as: :hidden, input_html: { value: "workshop"  } %>
 															<%= f.submit "Envoyer la demande", class: "btn btn-primary-rose" %>	
 														<% end %>	
 													</div>

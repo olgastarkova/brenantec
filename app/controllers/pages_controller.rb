@@ -23,6 +23,7 @@ class PagesController < ApplicationController
     @workshops = Workshop.all
     @programsteps = Programstep.all
     @sessions = Session.all
+    @brequests = Brequest.all
   end
 
 end

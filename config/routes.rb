@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   resources :programsteps
   resources :sessions
   resources :coaches
-  resources :brequests, only: [:new, :create, :index]
+  resources :brequests
   
 
   mount Attachinary::Engine => "/attachinary"

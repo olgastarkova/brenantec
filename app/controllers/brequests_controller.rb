@@ -1,4 +1,10 @@
 class BrequestsController < ApplicationController
+  before_action :set_brequest, only: [:show, :destroy]
+
+  def index
+    @brequests = Brequest.all
+  end  
+
   def new
   	@brequest = Brequest.new
   end
@@ -17,14 +23,26 @@ class BrequestsController < ApplicationController
 
   def show
   end
+
+  def destroy
+    @brequest.destroy
+  end
+
+
 end
 
 
 
 private
 
+  def set_brequest
+    @brequest = Brequest.find(params[:id])
+  end
+
+
+
   def brequest_params
-    params.require(:brequest).permit(:name, :email, :message, :date, :workshop_id, :checkin, :checkout, :nb_guests)
+    params.require(:brequest).permit(:name, :email, :message, :date, :workshop_id, :checkin, :checkout, :nb_guests, :subject)
   end
 
 
