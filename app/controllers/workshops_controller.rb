@@ -8,7 +8,7 @@ class WorkshopsController < ApplicationController
 	def show
 		@programsteps = @workshop.programsteps
 		@sessions = @workshop.sessions
-		@brequest = Brequest.new
+		@contact = Contact.new
 	end
 
 	def new
@@ -48,7 +48,7 @@ class WorkshopsController < ApplicationController
 
 
 	def tailor_made
-		@brequest = Brequest.new
+		@contact = Contact.new
 	end
 
 	def agenda

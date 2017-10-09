@@ -141,7 +141,7 @@
           <h5>A partir de <strong>70 eur</strong> / nuit</h5>
         </div>
         <div class="bkg-details">
-          <%= simple_form_for [@brequest] do |f| %>
+          <%= simple_form_for [@contact] do |f| %>
            <%= f.error_notification %>
            <%= f.input :checkin, as: :string, input_html: { class: "datepicker test-icon", id: "start" }, label: "Arrivée", placeholder: ''  %>
            <%= f.input :checkout, as: :string, input_html: { class: "datepicker test-icon", id: "end" }, label: "Départ", placeholder: '' %>

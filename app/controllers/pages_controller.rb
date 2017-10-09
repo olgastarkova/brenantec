@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 
 
   def about
-    @brequest = Brequest.new
+    @contact = Contact.new
     @coaches = Coach.all.order(:id)
   end
 
@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   end
 
   def blue
-    @brequest = Brequest.new
+    @contact = Contact.new
   end
 
   def stylesheet

@@ -44,14 +44,6 @@ end
 
 
 
-# if @restaurant.save
-#   RestaurantMailer.creation_confirmation(@restaurant).deliver_now
-#   redirect_to restaurant_path(@restaurant)
-# else
-#   render :new
-# end
-
-
 private
 
   def set_brequest
