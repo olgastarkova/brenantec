@@ -42,12 +42,10 @@
 // Font styling for navbar (and sidebar)
 
 .nav-link {
-  color: white;
   font-size: 12px;
   font-weight: 300;
   letter-spacing: 1px;
   text-transform: uppercase;
-  opacity: 0.8;
   cursor: pointer;
   color: $brand-blue;
   .homepage-logo & {
@@ -56,16 +54,21 @@
 }
 
 .homepage-logo {
-  #Oval-blue {
-    stroke: white;
-  }
-  #lotus-blue {
+  #dove {
     fill: white;
   }
 }
-.nav-link.active {
+
+.nav-link:active {
   font-weight: 700;
 }
+
+.nav-link:hover {
+  font-weight: 700;
+}
+
+
+
 
 
 span .nav-link {

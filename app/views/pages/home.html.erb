@@ -1,7 +1,41 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.4) 50%), url(<%= image_path 'home-page-4.jpg'%>)"%>
-  <div class="banner-content">
-    <h1 class="handwritten">Sentiers de Soi</h1>
-    <p>à Belle-Ile-en-Mer</p>
-    <a class="btn btn-primary-white btn-lg">Découvrir</a>
+<!-- <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.2) 0%, rgba(0,36,61,0.4) 50%), url(<%= image_path 'home-page-4.jpg'%>)"%> -->
+<section id="section01" class="demo">
+  <div class="banner"%>
+    <div class="video-background">
+      <div class="video-foreground">
+        <video loop autoplay>
+          <source src="https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/256/7/176282263/572345167.mp4?token=1509487434-0x554b1d11cf288762eb5f9c4976b7469cf2168d45&download=1&filename=Sea+-+4006.mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="banner-content">
+      <h1 class="handwritten">Sentiers de Soi</h1>
+      <p>à Belle-Ile-en-Mer</p>
+      <a href="#section02" class="btn btn-primary-white btn-lg">
+        Découvrir
+      </a>
+    </div>
   </div>
-</div>
+</section>
+<section id="section02" class="demo">
+  <div class="full-screen">
+
+  </div>
+</section>
+
+
+<script type="text/javascript">
+  var elem = document.createElement('script');
+  elem.onload = function () {
+    jQuery(document).ready(function () {
+      $('a[href*=#]').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 'slow');
+      });
+    });
+  };
+</script>
+
+
+
