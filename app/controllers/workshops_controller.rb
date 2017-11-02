@@ -7,7 +7,7 @@ class WorkshopsController < ApplicationController
 
 	def show
 		@programsteps = @workshop.programsteps
-		@sessions = @workshop.sessions
+		@sessions = @workshop.sessions.where("date > ?", Date.today)
 		@brequest = Brequest.new
 	end
 
@@ -52,7 +52,7 @@ class WorkshopsController < ApplicationController
 	end
 
 	def agenda
-		sessions = Session.all
+		sessions = Session.where("date > ?", Date.today)
 		@session_months = sessions.group_by { |session| session[:date].strftime("%B %Y") }
 	end
 end

@@ -149,7 +149,73 @@
            <p><strong>Prix par nuit:</strong><span> 70 EUR</span> </p>
            <p><strong>Nombre de jours:</strong>  <span id = "nb_days"> jours </span></p>
            <p><strong>Prix final:</strong>  <span id = "final_price"> EUR </span></p>
-           <%= f.submit "Envoyer la demande", class: 'btn btn-primary-rose fixed-size-sf text-center'%>
+
+          <!-- BEGINNING OF MODAL -->
+                      
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary-rose fixed-size-sf text-center" data-toggle="modal" data-target="#myModal">
+              Envoyer la demande
+            </button>
+
+
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Demande de réservation</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="modal-row-1">
+                      <%= image_tag "maison-bleue.png", class: "card-image-w panoramic-image" %>
+                      <h2 class="custom space-before">Petite Maison Bleue</h2>
+                    </div>
+                    <div class="bkg-details">
+                      <%= simple_form_for [@brequest] do |f| %>
+                        <div class="col-xs-6 inputs-inline-left">
+                           <%= f.input :checkin, as: :string, input_html: { class: "datepicker test-icon", id: "start" }, label: "Arrivée", placeholder: ''  %>
+                        </div>
+                        <div class="col-xs-6 inputs-inline-right">
+                          <%= f.input :checkout, as: :string, input_html: { class: "datepicker test-icon", id: "end" }, label: "Départ", placeholder: '' %>
+                        </div>
+                          
+                      
+
+                        <%= f.input :name, label: 'Prénom' %>
+                        <%= f.input :email %>
+                        <%= f.input :message %>
+                        <%= f.input :nb_guests, as: :hidden, input_html: { class: "qty", value: "1", name: 'quantity' } %>
+                        <%= f.input :subject, as: :hidden, input_html: { value: "accommodation" } %>
+                        <%= f.submit "Envoyer la demande", class: "btn btn-primary-rose" %> 
+                      <% end %> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- END OF MODAL -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <% end %>
         </div>
         

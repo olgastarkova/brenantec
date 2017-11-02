@@ -14,20 +14,25 @@ class BrequestsController < ApplicationController
     @brequest = Brequest.new(brequest_params)
     @brequest.nb_guests = params[:quantity].to_i
 
-    if @brequest.save && controller_name == 'pages' && @brequest.subject == "contact"
+    if @brequest.save && @brequest.subject == "contact"
       BrequestMailer.contact(@brequest).deliver_now
+      flash[:notice] = 'Merci ! Votre message a bien été envoyé.'
       redirect_to workshop_path(params[:workshop_id])
-    elsif @brequest.save && controller_name == 'pages' && @brequest.subject == "accommodation"
+    elsif @brequest.save && @brequest.subject == "accommodation"
       BrequestMailer.accommodation(@brequest).deliver_now
-      redirect_to workshop_path(params[:workshop_id])
+      flash[:notice] = 'Merci ! Votre demande de réservation a bien été envoyée.'
+      redirect_to blue_path
     elsif @brequest.save && @brequest.subject == "workshop"
       BrequestMailer.workshop(@brequest).deliver_now
+      flash[:notice] = 'Merci ! Votre demande de participation a bien été envoyée.'
       redirect_to workshop_path(params[:workshop_id])
-    elsif @brequest.save && controller_name == 'workshops' && @brequest.subject == "tailor_made"
+    elsif @brequest.save && @brequest.subject == "tailor_made"
       BrequestMailer.tailor_made(@brequest).deliver_now
+      flash[:notice] = 'Merci ! Votre demande de renseignement a bien été envoyée.'
       redirect_to workshop_path(params[:workshop_id])   
     elsif @brequest.save
       redirect_to root_path
+      flash[:notice] = 'Merci ! Votre message a bien été envoyé.'
     end
   end
 

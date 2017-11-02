@@ -8,31 +8,33 @@
 					<h2 class="custom top-margin">Prochains stages et ateliers</h2>
 					<div class="row">
 						<% @session_months.each do |month, sessions| %>
-							<h3 class="customized no-top-padding"><%= month %></h3>
-							<% sessions.each do |session| %>
-								<div class="col-xs-12 col-sm-4">
-									<%= link_to session_path(session) do %>
-										<div class="card-workshop agenda">
-											<div class="image-holder">
-												<% session.workshop.photos.each do |photo|  %>
-													<%= cl_image_tag photo.path, width: 200, height: 200, crop: :fill %>
-												<% end %>
-											</div>
-																		
-											<div class="date-label text-center">
-												<p class="week fine-print"><%= session.date.strftime("%A") %></p>
-												<p class="day"><%= session.date.strftime("%d") %></p>
-												<p class="month"><%= session.date.strftime("%b") %></p>
+							<div class="col-xs-12">
+								<h3 class="customized no-top-padding"><%= month %></h3>
+								<% sessions.each do |session| %>
+									<div class="col-xs-12 col-sm-4">
+										<%= link_to session_path(session) do %>
+											<div class="card-workshop agenda">
+												<div class="image-holder">
+													<% session.workshop.photos.each do |photo|  %>
+														<%= cl_image_tag photo.path, width: 200, height: 200, crop: :fill %>
+													<% end %>
+												</div>
+																			
+												<div class="date-label text-center">
+													<p class="week fine-print"><%= session.date.strftime("%A") %></p>
+													<p class="day"><%= session.date.strftime("%d") %></p>
+													<p class="month"><%= session.date.strftime("%b") %></p>
 
+												</div>
+												<div class="description-workshop">
+													<p class="note"><%= session.workshop.format %></p>
+													<p class="title"><%= session.workshop.title %></p>
+												</div>
 											</div>
-											<div class="description-workshop">
-												<p class="note"><%= session.workshop.format %></p>
-												<p class="title"><%= session.workshop.title %></p>
-											</div>
-										</div>
-									<% end %>
-								</div>
-							<% end %>
+										<% end %>
+									</div>
+								<% end %>
+							</div>
 						<% end %>
 
 					</div>
