@@ -3,9 +3,10 @@
   <div class="banner"%>
     <div class="video-background">
       <div class="video-foreground">
-        <video loop autoplay>
+<!--         <video loop autoplay>
           <source src="assets/images/sea.mp4">
-        </video>
+        </video> -->
+        <%= video_tag("sea.mp4", loop: true, autoplay: true, poster: true) %>
       </div>
     </div>
 
