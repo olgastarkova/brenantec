@@ -218,16 +218,15 @@
 .cards-luxe {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   .card {
-    flex: 1 0 30%;
-    border: 1px solid $brand-light-gray;
+    flex: 1 1 30%;
     margin: 15px;
+    height: auto;
 
     img {
       width: 40px;
-      margin-left: 10px;
     }
 
     p {
@@ -238,6 +237,20 @@
 }
 
 
+
+.cards-luxe {
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .cards-luxe {
+    flex-wrap: wrap;
+  }
+}
 
 
 .card-workshop.agenda {
