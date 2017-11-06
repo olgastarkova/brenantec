@@ -117,6 +117,69 @@ li img {
   }
 
 
+
+// TEAM
+
+.member {
+  background: white;
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.member-avatar {
+  flex-shrink: 0;
+
+  img {
+    border-radius: 50%;
+    width: 100px;
+    height: auto;
+    margin-top: 15px;
+    margin-right: 30px;
+  }
+}
+
+  
+
+
+.member-body {
+  flex: 1 1 60%;
+
+  h3.name {
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 15px;
+    color: $brand-honey;
+    font-weight: 300;
+  }
+
+  p.title {
+    margin-top: 5px;
+    margin-left: 1px;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  p.text{
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+}
+
+
+.member-link{
+  p {
+    font-size: 13px;
+    text-align: right;
+  }
+}
+
+
+
+
 // Contacts Tab
 
 span.contact {

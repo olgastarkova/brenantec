@@ -3,6 +3,12 @@
 img.panoramic-image {
     max-width: 100%;
     height: auto;
+    width: 100%;
+}
+
+.footer-image {
+  margin-top: 25px;
+  opacity: 0.8;
 }
 
 .big-avatar {
@@ -18,11 +24,6 @@ img.panoramic-image {
   border-radius: 50%;
 }
 
-// .squared {
-//   object-fit: cover;
-//   width: 150px;
-//   height: 150px;
-// }
 
 // Icons
 

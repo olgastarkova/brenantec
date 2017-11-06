@@ -82,30 +82,33 @@
             <!-- TEAM -->
 
             <h3 class="customized">Equipe de Sentiers de Soi</h3>
-            <div class="cards">
-              <% @coaches.each do |coach| %>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                  <%= link_to coach_path(coach) do %>
-                    <div class="card-coach">
-                      <div class="photo-holder">
-                        <% if coach.photo? %>
-                          <%= cl_image_tag coach.photo.path, width: 150, height: 150, crop: :fill, class: "text-center" %>
-                        <% else %>
-                          <%= image_tag 'http://placehold.it/180x180', class: "text-center" %>
-                        <% end %>
-                      </div>
-                      <div class="description-coach">
-                        <p class="title name honey"><%= coach.name %></p>
-                        <p class="title fine-print"><%= coach.role %></p>
-                        <p class="small-note"><%= simple_format truncate(coach.intro, length: 200, separator: ' ') %></p>
-                        <p class="read-more">Lire la suite</p>
-                      </div>
-                    </div>
+            <% @coaches.each do |coach| %>
+              <div class="member">
+                <div class="member-avatar">
+                  <% if coach.photo? %>
+                    <%= cl_image_tag coach.photo.path, width: 150, height: 150, crop: :fill, class: "text-center" %>
+                  <% else %>
+                    <%= image_tag 'http://placehold.it/180x180', class: "text-center" %>
                   <% end %>
                 </div>
-              <% end %>              
-            </div>
+                <div class="member-body">
+                  <h3 class="name"><%= coach.name %></h3>
+                  <p class="title"><%= coach.role %></p>
+                  <%= simple_format truncate(coach.intro, length: 200, separator: ' '), class: "text" %>
+                  <div class="member-link">
+                    <%= link_to coach_path(coach) do %>
+                       <p>Lire la suite</p>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
           </div>
+          
+          <!-- FOOTER IMAGE -->
+
+          <%= image_tag 'tempete2.jpg', class:"panoramic-image footer-image" %>
+        
         </div>
       </div>
     </div>
