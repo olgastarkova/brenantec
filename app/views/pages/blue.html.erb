@@ -132,13 +132,14 @@
 
       <!-- Calendar -->
       <h3 class="customized">Disponibilités</h3>
+      <script src='https://www.accommodationcalendar.com/widget/cwidget.php?calendarID=aaa72ddf099a090860288b031f0f673c898ace628e4143e601463cfa742390b8&col=3&row=4&size=2&lang=english&bg=FFFFFF&dfc=000000&border=CCCCCC&hbg=F1F0F0&hfc=000000&abg=A3FF6E&afc=000000&ubg=C8434C&ufc=000000&mobileresize=yes'></script>
     </div>
 
     <!-- Booking request form -->
     <div class="form-section">
       <div class="bkg-request">
         <div class="bkg-header text-center">
-          <h5>A partir de <strong>70 eur</strong> / nuit</h5>
+          <h5>A partir de <strong>90 eur</strong> / nuit</h5>
         </div>
         <div class="bkg-details">
           <%= simple_form_for [@brequest] do |f| %>
@@ -146,7 +147,7 @@
            <%= f.input :checkin, as: :string, input_html: { class: "datepicker test-icon", id: "start" }, label: "Arrivée", placeholder: ''  %>
            <%= f.input :checkout, as: :string, input_html: { class: "datepicker test-icon", id: "end" }, label: "Départ", placeholder: '' %>
            <%= f.input :subject, as: :hidden, input_html: { value: "accommodation"  } %>
-           <p><strong>Prix par nuit:</strong><span> 70 EUR</span> </p>
+           <p><strong>Prix par nuit:</strong><span> 90 EUR</span> </p>
            <p><strong>Nombre de jours:</strong>  <span id = "nb_days"> jours </span></p>
            <p><strong>Prix final:</strong>  <span id = "final_price"> EUR </span></p>
 
@@ -181,15 +182,12 @@
                         <div class="col-xs-6 inputs-inline-right">
                           <%= f.input :checkout, as: :string, input_html: { class: "datepicker test-icon", id: "end" }, label: "Départ", placeholder: '' %>
                         </div>
-                          
-                      
-
                         <%= f.input :name, label: 'Prénom' %>
                         <%= f.input :email %>
                         <%= f.input :message %>
                         <%= f.input :nb_guests, as: :hidden, input_html: { class: "qty", value: "1", name: 'quantity' } %>
                         <%= f.input :subject, as: :hidden, input_html: { value: "accommodation" } %>
-                        <%= f.submit "Envoyer la demande", class: "btn btn-primary-rose" %> 
+                        <%= f.submit "Envoyer la demande", class: "btn btn-primary-rose fixed-size" %> 
                       <% end %> 
                     </div>
                   </div>
@@ -199,29 +197,9 @@
           <!-- END OF MODAL -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           <% end %>
         </div>
         
-        <div class="bkg-control text-center">
-          <a href="https://www.abritel.fr/location-vacances/p6081247a" target="blank" class="btn btn-agency abritel fixed-size"><%=image_tag "abritel-logo.svg", class: "space-right" %>Réserver sur Abritel</a>
-        </div>
         <div class="bkg-control text-center">
           <a href="https://www.airbnb.com/rooms/20894862?location=Sauzon%2C%20France" target="blank" class="btn btn-agency airbnb fixed-size"><%=image_tag "airbnb_logo.png", class: "space-right" %>Réserver sur AirBnB</a>
         </div>
